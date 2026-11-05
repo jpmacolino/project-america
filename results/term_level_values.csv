@@ -1,0 +1,319 @@
+term_start,party,president,value,outcome
+1901,R,McKinley,1.7141531873554605,gdp_pc_growth
+1905,R,T. Roosevelt,-1.4931747227604042,gdp_pc_growth
+1909,R,Taft,1.382758984069099,gdp_pc_growth
+1913,D,Wilson,-0.24143325955256978,gdp_pc_growth
+1917,D,Wilson,0.33505363247301445,gdp_pc_growth
+1921,R,Harding,4.156788567119918,gdp_pc_growth
+1925,R,Coolidge,2.2156488795613605,gdp_pc_growth
+1929,R,Hoover,-8.41168312717877,gdp_pc_growth
+1933,D,F. Roosevelt,8.335771580162676,gdp_pc_growth
+1937,D,F. Roosevelt,6.430030139054699,gdp_pc_growth
+1941,D,F. Roosevelt,8.729531623182885,gdp_pc_growth
+1945,D,Truman,-4.10512126493856,gdp_pc_growth
+1949,D,Truman,4.4832143490309395,gdp_pc_growth
+1953,R,Eisenhower,0.8566848338891653,gdp_pc_growth
+1957,R,Eisenhower,1.0013348230501151,gdp_pc_growth
+1961,D,Kennedy,4.125446901162988,gdp_pc_growth
+1965,D,L. Johnson,3.184536558883133,gdp_pc_growth
+1969,R,Nixon,2.399799176127715,gdp_pc_growth
+1973,R,Nixon,1.2889472037392213,gdp_pc_growth
+1977,D,Carter,1.609040366870662,gdp_pc_growth
+1981,R,Reagan,2.5264237764328623,gdp_pc_growth
+1985,R,Reagan,2.7107340963300253,gdp_pc_growth
+1989,R,G.H.W. Bush,0.7138972221476969,gdp_pc_growth
+1993,D,Clinton,2.4745025685177335,gdp_pc_growth
+1997,D,Clinton,2.40356621958675,gdp_pc_growth
+2001,R,G.W. Bush,1.9844847579215674,gdp_pc_growth
+2005,R,G.W. Bush,-0.3739732260247487,gdp_pc_growth
+2009,D,Obama,1.3531463015232337,gdp_pc_growth
+2013,D,Obama,1.648631023114833,gdp_pc_growth
+2017,R,Trump,1.7736043052403616,gdp_pc_growth
+2021,D,Biden,2.051136986505734,gdp_pc_growth
+1901,R,McKinley,0.007500000000000076,unemp_change
+1905,R,T. Roosevelt,0.12749999999999995,unemp_change
+1909,R,Taft,-0.050000000000000044,unemp_change
+1913,D,Wilson,0.07500000000000019,unemp_change
+1917,D,Wilson,0.875,unemp_change
+1921,R,Harding,-0.9525000000000001,unemp_change
+1925,R,Coolidge,-0.07749999999999989,unemp_change
+1929,R,Hoover,3.7975000000000003,unemp_change
+1933,D,F. Roosevelt,-1.4250000000000007,unemp_change
+1937,D,F. Roosevelt,-1.0499999999999994,unemp_change
+1941,D,F. Roosevelt,-1.9999999999999998,unemp_change
+1945,D,Truman,1.0375,unemp_change
+1949,D,Truman,-0.78125,unemp_change
+1953,R,Eisenhower,0.34375,unemp_change
+1957,R,Eisenhower,0.5979166666666667,unemp_change
+1961,D,Kennedy,-0.5458333333333334,unemp_change
+1965,D,L. Johnson,-0.25416666666666654,unemp_change
+1969,R,Nixon,0.3416666666666667,unemp_change
+1973,R,Nixon,0.5479166666666666,unemp_change
+1977,D,Carter,0.14166666666666683,unemp_change
+1981,R,Reagan,-0.10625000000000018,unemp_change
+1985,R,Reagan,-0.48333333333333317,unemp_change
+1989,R,G.H.W. Bush,0.41249999999999987,unemp_change
+1993,D,Clinton,-0.4916666666666667,unemp_change
+1997,D,Clinton,-0.04999999999999982,unemp_change
+2001,R,G.W. Bush,0.08541666666666647,unemp_change
+2005,R,G.W. Bush,1.0499999999999998,unemp_change
+2009,D,Obama,-0.4812499999999995,unemp_change
+2013,D,Obama,-0.75,unemp_change
+2017,R,Trump,0.25,unemp_change
+2021,D,Biden,-0.4416666666666667,unemp_change
+1901,R,McKinley,0.8647254395551807,inflation
+1905,R,T. Roosevelt,0.8358127128778148,inflation
+1909,R,Taft,2.1185307113772645,inflation
+1913,D,Wilson,7.231083825468332,inflation
+1917,D,Wilson,8.344856533854628,inflation
+1921,R,Harding,-0.5221753478391489,inflation
+1925,R,Coolidge,-0.5770596649278593,inflation
+1929,R,Hoover,-6.974090535297496,inflation
+1933,D,F. Roosevelt,2.564471817398728,inflation
+1937,D,F. Roosevelt,0.6359916713615243,inflation
+1941,D,F. Roosevelt,5.012138185540638,inflation
+1945,D,Truman,7.035311485954644,inflation
+1949,D,Truman,2.86875640019163,inflation
+1953,R,Eisenhower,1.2753220310920965,inflation
+1957,R,Eisenhower,1.5244949630144333,inflation
+1961,D,Kennedy,1.3340835717849164,inflation
+1965,D,L. Johnson,3.7517121526390307,inflation
+1969,R,Nixon,4.810149496916982,inflation
+1973,R,Nixon,7.7523733500819985,inflation
+1977,D,Carter,10.140752094365691,inflation
+1981,R,Reagan,4.208266699746566,inflation
+1985,R,Reagan,3.5465229469338277,inflation
+1989,R,G.H.W. Bush,3.8249485486862467,inflation
+1993,D,Clinton,2.6253608754395863,inflation
+1997,D,Clinton,2.460515055467938,inflation
+2001,R,G.W. Bush,2.445557327346126,inflation
+2005,R,G.W. Bush,2.348984082166261,inflation
+2009,D,Obama,2.0592640959759434,inflation
+2013,D,Obama,1.272028038597628,inflation
+2017,R,Trump,2.5065056773160954,inflation
+2021,D,Biden,4.879904115120226,inflation
+1965,D,L. Johnson,1.3082256815270643,real_wage_growth
+1969,R,Nixon,1.4727112101056705,real_wage_growth
+1973,R,Nixon,-0.9252915243162851,real_wage_growth
+1977,D,Carter,-2.3470821478202786,real_wage_growth
+1981,R,Reagan,-0.17727892170048554,real_wage_growth
+1985,R,Reagan,-0.6560975513084433,real_wage_growth
+1989,R,G.H.W. Bush,-0.8237474915053555,real_wage_growth
+1993,D,Clinton,0.45709453317274173,real_wage_growth
+1997,D,Clinton,1.3188556394600148,real_wage_growth
+2001,R,G.W. Bush,0.1333742969815921,real_wage_growth
+2005,R,G.W. Bush,1.2419742572256753,real_wage_growth
+2009,D,Obama,-0.09645987103742426,real_wage_growth
+2013,D,Obama,0.9941655772277014,real_wage_growth
+2017,R,Trump,1.5377445799165335,real_wage_growth
+2021,D,Biden,0.13877616346890478,real_wage_growth
+1985,R,Reagan,1.8294790495827051,real_med_hh_inc_growth
+1989,R,G.H.W. Bush,-1.3778842681880121,real_med_hh_inc_growth
+1993,D,Clinton,1.9279173818238071,real_med_hh_inc_growth
+1997,D,Clinton,1.0443172041508575,real_med_hh_inc_growth
+2001,R,G.W. Bush,0.1584463832281724,real_med_hh_inc_growth
+2005,R,G.W. Bush,-0.35270294545570735,real_med_hh_inc_growth
+2009,D,Obama,-0.04182351456409883,real_med_hh_inc_growth
+2013,D,Obama,2.307486235733336,real_med_hh_inc_growth
+2017,R,Trump,1.4429160203141667,real_med_hh_inc_growth
+2021,D,Biden,1.2273301434261974,real_med_hh_inc_growth
+1961,D,Kennedy,-1.1499999999999995,poverty_change
+1965,D,L. Johnson,-1.3000000000000003,poverty_change
+1969,R,Nixon,-0.25,poverty_change
+1973,R,Nixon,0.125,poverty_change
+1977,D,Carter,0.6000000000000001,poverty_change
+1981,R,Reagan,1.3877787807814457e-17,poverty_change
+1985,R,Reagan,-0.2999999999999998,poverty_change
+1989,R,G.H.W. Bush,0.5749999999999997,poverty_change
+1993,D,Clinton,-0.44999999999999973,poverty_change
+1997,D,Clinton,-0.40000000000000036,poverty_change
+2001,R,G.W. Bush,0.22500000000000006,poverty_change
+2005,R,G.W. Bush,0.42500000000000027,poverty_change
+2009,D,Obama,0.125,poverty_change
+2013,D,Obama,-0.625,poverty_change
+2017,R,Trump,-0.17500000000000027,poverty_change
+2021,D,Biden,-0.35000000000000003,poverty_change
+1913,D,Wilson,0.2199999999999998,top1_change
+1917,D,Wilson,-0.54,top1_change
+1921,R,Harding,0.3825000000000003,top1_change
+1925,R,Coolidge,0.375,top1_change
+1929,R,Hoover,-1.1674999999999995,top1_change
+1933,D,F. Roosevelt,0.79,top1_change
+1937,D,F. Roosevelt,0.22749999999999918,top1_change
+1941,D,F. Roosevelt,-1.8324999999999996,top1_change
+1945,D,Truman,0.36750000000000016,top1_change
+1949,D,Truman,-0.4275000000000002,top1_change
+1953,R,Eisenhower,-0.1200000000000001,top1_change
+1957,R,Eisenhower,-0.25,top1_change
+1961,D,Kennedy,0.12500000000000003,top1_change
+1965,D,L. Johnson,-0.35749999999999993,top1_change
+1969,R,Nixon,-0.17999999999999974,top1_change
+1973,R,Nixon,-0.07500000000000015,top1_change
+1977,D,Carter,0.022499999999999964,top1_change
+1981,R,Reagan,0.3999999999999999,top1_change
+1985,R,Reagan,0.605,top1_change
+1989,R,G.H.W. Bush,-0.1349999999999998,top1_change
+1993,D,Clinton,0.4624999999999999,top1_change
+1997,D,Clinton,0.14749999999999996,top1_change
+2001,R,G.W. Bush,0.3674999999999997,top1_change
+2005,R,G.W. Bush,-0.33999999999999986,top1_change
+2009,D,Obama,0.4400000000000004,top1_change
+2013,D,Obama,0.14749999999999996,top1_change
+2017,R,Trump,0.20749999999999957,top1_change
+1949,D,Truman,-0.4750000000000004,gini_change
+1953,R,Eisenhower,-0.20000000000000018,gini_change
+1957,R,Eisenhower,0.5750000000000005,gini_change
+1961,D,Kennedy,-0.4500000000000004,gini_change
+1965,D,L. Johnson,-0.17500000000000018,gini_change
+1969,R,Nixon,0.1750000000000001,gini_change
+1973,R,Nixon,0.17500000000000013,gini_change
+1977,D,Carter,0.1500000000000001,gini_change
+1981,R,Reagan,0.5000000000000004,gini_change
+1985,R,Reagan,0.3000000000000002,gini_change
+1989,R,G.H.W. Bush,0.10000000000000005,gini_change
+1993,D,Clinton,-2.7755575615628914e-17,gini_change
+1997,D,Clinton,0.1500000000000001,gini_change
+2001,R,G.W. Bush,0.12500000000000006,gini_change
+2005,R,G.W. Bush,0.07500000000000007,gini_change
+2009,D,Obama,0.3000000000000002,gini_change
+2013,D,Obama,0.07500000000000008,gini_change
+2017,R,Trump,0.10000000000000003,gini_change
+2021,D,Biden,-0.05000000000000006,gini_change
+1901,R,McKinley,-11.7950706001238,real_oil_return
+1905,R,T. Roosevelt,2.1982070087905976,real_oil_return
+1909,R,Taft,5.516012230840565,real_oil_return
+1913,D,Wilson,5.168394065756562,real_oil_return
+1917,D,Wilson,-5.758966852648584,real_oil_return
+1921,R,Harding,-0.21101502952384843,real_oil_return
+1925,R,Coolidge,-6.417363597591796,real_oil_return
+1929,R,Hoover,-9.013270202490164,real_oil_return
+1933,D,F. Roosevelt,11.585327298954518,real_oil_return
+1937,D,F. Roosevelt,-1.498145062626535,real_oil_return
+1941,D,F. Roosevelt,-7.068092534174149,real_oil_return
+1945,D,Truman,6.160270410118606,real_oil_return
+1949,D,Truman,-0.8460904348716185,real_oil_return
+1953,R,Eisenhower,-1.6669749497020825,real_oil_return
+1957,R,Eisenhower,-2.8761754947713216,real_oil_return
+1961,D,Kennedy,-1.3340835717849249,real_oil_return
+1965,D,L. Johnson,-3.7517121526390307,real_oil_return
+1969,R,Nixon,10.267371791849822,real_oil_return
+1973,R,Nixon,28.30860511125507,real_oil_return
+1977,D,Carter,13.565397224851932,real_oil_return
+1981,R,Reagan,-10.838447391740546,real_oil_return
+1985,R,Reagan,-13.884275506850711,real_oil_return
+1989,R,G.H.W. Bush,-5.607746824900188,real_oil_return
+1993,D,Clinton,0.31855988304848193,real_oil_return
+1997,D,Clinton,3.7164905581503174,real_oil_return
+2001,R,G.W. Bush,17.60962052385231,real_oil_return
+2005,R,G.W. Bush,0.731780537843802,real_oil_return
+2009,D,Obama,12.100533749326878,real_oil_return
+2013,D,Obama,-18.663742709344383,real_oil_return
+2017,R,Trump,4.215913074011491,real_oil_return
+2021,D,Biden,-0.545116790106202,real_oil_return
+1913,D,Wilson,5.8079652063511755,real_commodity_return
+1917,D,Wilson,-12.998843976954443,real_commodity_return
+1921,R,Harding,1.9311413110281264,real_commodity_return
+1925,R,Coolidge,-1.4215491775095737,real_commodity_return
+1929,R,Hoover,-2.21057445304401,real_commodity_return
+1933,D,F. Roosevelt,4.170682961937673,real_commodity_return
+1937,D,F. Roosevelt,-0.38543836151799926,real_commodity_return
+1941,D,F. Roosevelt,-0.21343844827787517,real_commodity_return
+1945,D,Truman,2.141658452654924,real_commodity_return
+1949,D,Truman,-0.2827788318537544,real_commodity_return
+1953,R,Eisenhower,0.38228580374491783,real_commodity_return
+1957,R,Eisenhower,-1.2057655462530656,real_commodity_return
+1961,D,Kennedy,-0.792099374209438,real_commodity_return
+1965,D,L. Johnson,-1.2998157185348687,real_commodity_return
+1969,R,Nixon,1.067275442040005,real_commodity_return
+1973,R,Nixon,1.3787379105188222,real_commodity_return
+1977,D,Carter,0.1802932855341508,real_commodity_return
+1981,R,Reagan,-2.9362646288662044,real_commodity_return
+1985,R,Reagan,-1.4346975699947802,real_commodity_return
+1989,R,G.H.W. Bush,-2.382627791937748,real_commodity_return
+1993,D,Clinton,-0.8616037242914223,real_commodity_return
+1997,D,Clinton,-1.2012340721837733,real_commodity_return
+2001,R,G.W. Bush,1.5424108161850412,real_commodity_return
+2005,R,G.W. Bush,0.0002490467211146985,real_commodity_return
+2009,D,Obama,2.0020897307482803,real_commodity_return
+2013,D,Obama,-2.516172379672965,real_commodity_return
+2017,R,Trump,1.5189005309580623,real_commodity_return
+2021,D,Biden,-1.110959203817242,real_commodity_return
+1901,R,McKinley,0.25,life_exp_change
+1905,R,T. Roosevelt,0.625,life_exp_change
+1909,R,Taft,0.1750000000000007,life_exp_change
+1913,D,Wilson,0.125,life_exp_change
+1917,D,Wilson,1.0500000000000007,life_exp_change
+1921,R,Harding,0.07499999999999929,life_exp_change
+1925,R,Coolidge,-1.3877787807814457e-17,life_exp_change
+1929,R,Hoover,0.5999999999999996,life_exp_change
+1933,D,F. Roosevelt,0.03250000000000064,life_exp_change
+1937,D,F. Roosevelt,0.6899999999999995,life_exp_change
+1941,D,F. Roosevelt,0.45000000000000107,life_exp_change
+1945,D,Truman,0.509999999999998,life_exp_change
+1949,D,Truman,0.27025000000000077,life_exp_change
+1953,R,Eisenhower,0.17675000000000193,life_exp_change
+1957,R,Eisenhower,0.2089999999999996,life_exp_change
+1961,D,Kennedy,-0.0012500000000024158,life_exp_change
+1965,D,L. Johnson,0.056750000000000966,life_exp_change
+1969,R,Nixon,0.23025000000000162,life_exp_change
+1973,R,Nixon,0.4574999999999996,life_exp_change
+1977,D,Carter,0.22250000000000014,life_exp_change
+1981,R,Reagan,0.1332500000000003,life_exp_change
+1985,R,Reagan,0.11474999999999722,life_exp_change
+1989,R,G.H.W. Bush,0.11475000000000074,life_exp_change
+1993,D,Clinton,0.2325000000000017,life_exp_change
+1997,D,Clinton,0.10524999999999803,life_exp_change
+2001,R,G.W. Bush,0.15174999999999983,life_exp_change
+2005,R,G.W. Bush,0.23750000000000066,life_exp_change
+2009,D,Obama,0.08524999999999844,life_exp_change
+2013,D,Obama,-0.04224999999999922,life_exp_change
+2017,R,Trump,-0.5659999999999988,life_exp_change
+1949,D,Truman,-2.6766814425392416,inf_mort_change
+1953,R,Eisenhower,-2.1935606153346443,inf_mort_change
+1957,R,Eisenhower,-1.788370173057177,inf_mort_change
+1961,D,Kennedy,-2.166002423148994,inf_mort_change
+1965,D,L. Johnson,-3.024075313559707,inf_mort_change
+1969,R,Nixon,-4.142647034193675,inf_mort_change
+1973,R,Nixon,-4.831090140463392,inf_mort_change
+1977,D,Carter,-4.502038564579147,inf_mort_change
+1981,R,Reagan,-3.209869732794462,inf_mort_change
+1985,R,Reagan,-2.3643169349625848,inf_mort_change
+1989,R,G.H.W. Bush,-3.2906510071503625,inf_mort_change
+1993,D,Clinton,-3.021115052691706,inf_mort_change
+1997,D,Clinton,-1.6141296151155822,inf_mort_change
+2001,R,G.W. Bush,-0.968092020884509,inf_mort_change
+2005,R,G.W. Bush,-1.5685409346260906,inf_mort_change
+2009,D,Obama,-1.780251998794584,inf_mort_change
+2013,D,Obama,-1.2648148013997245,inf_mort_change
+2017,R,Trump,-0.6109715624546652,inf_mort_change
+2021,D,Biden,-0.04192758020000373,inf_mort_change
+1965,D,L. Johnson,1.25,hs_attain_change
+1969,R,Nixon,1.4499999999999993,hs_attain_change
+1973,R,Nixon,1.2750000000000021,hs_attain_change
+1977,D,Carter,1.1999999999999993,hs_attain_change
+1981,R,Reagan,1.0500000000000007,hs_attain_change
+1985,R,Reagan,0.75,hs_attain_change
+1989,R,G.H.W. Bush,0.8249999999999993,hs_attain_change
+1993,D,Clinton,0.47499999999999787,hs_attain_change
+1997,D,Clinton,0.5,hs_attain_change
+2001,R,G.W. Bush,0.27500000000000213,hs_attain_change
+2005,R,G.W. Bush,0.375,hs_attain_change
+2009,D,Obama,0.375,hs_attain_change
+2013,D,Obama,0.34999999999999787,hs_attain_change
+2017,R,Trump,0.375,hs_attain_change
+2021,D,Biden,0.15000000000000208,hs_attain_change
+1965,D,L. Johnson,0.3249999999999997,ba_attain_change
+1969,R,Nixon,0.4750000000000001,ba_attain_change
+1973,R,Nixon,0.7000000000000002,ba_attain_change
+1977,D,Carter,0.42500000000000027,ba_attain_change
+1981,R,Reagan,0.5749999999999993,ba_attain_change
+1985,R,Reagan,0.4250000000000007,ba_attain_change
+1989,R,G.H.W. Bush,0.1999999999999993,ba_attain_change
+1993,D,Clinton,0.5,ba_attain_change
+1997,D,Clinton,0.5750000000000002,ba_attain_change
+2001,R,G.W. Bush,0.375,ba_attain_change
+2005,R,G.W. Bush,0.4500000000000002,ba_attain_change
+2009,D,Obama,0.5499999999999998,ba_attain_change
+2013,D,Obama,0.6250000000000009,ba_attain_change
+2017,R,Trump,0.9249999999999989,ba_attain_change
+2021,D,Biden,0.4250000000000007,ba_attain_change

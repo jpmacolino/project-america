@@ -1,0 +1,18 @@
+{
+  "n_primary_tests": 210,
+  "primary_raw_p_lt_05": 33,
+  "primary_q_lt_05": 7,
+  "primary_q_lt_10": 12,
+  "block_perm_q_lt_05": 0,
+  "term_q_lt_05": 0,
+  "term_equivalent_at_05": 2,
+  "reverse_causality": {
+    "logit_coef_gdp": 0.09682875203017018,
+    "logit_p": 0.20600087653326238,
+    "n": 32,
+    "pointbiserial_r": 0.2364997208996626,
+    "pointbiserial_p": 0.19250792705798805,
+    "kept_mean_growth": 2.6050664657317117,
+    "lost_mean_growth": 0.06941500132115717
+  }
+}

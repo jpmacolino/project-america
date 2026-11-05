@@ -1,0 +1,53 @@
+R1/R2: q_trend<.10 or q_rotation<.10
+                     outcome  lag model         term  coef_trend  p_trend    coef  p_rotation    n  q_trend  q_rotation
+15             unemp_change    0    T1     dem_pres     -0.7811   0.0024 -0.6565      0.0574  125   0.0710      0.8100
+23             unemp_change    1    T3  unified_dem     -1.2978   0.0015 -1.0424      0.0082  125   0.0644      0.5738
+41                inflation    2    T1    dem_house      3.7452   0.0003  2.9218      0.0738  125   0.0221      0.8607
+62   real_med_hh_inc_growth    0    T1   dem_senate     -2.1805   0.0000 -2.4101      0.1639   41   0.0057      0.9156
+66   real_med_hh_inc_growth    1    T1    dem_house     -2.3653   0.0041 -1.0522      0.4672   41   0.0867      0.9811
+71   real_med_hh_inc_growth    2    T1    dem_house     -2.0120   0.0003 -0.5411      0.6803   41   0.0221      0.9931
+97              top1_change    1    T1   dem_senate     -0.3675   0.0050 -0.3356      0.2705  109   0.0948      0.9156
+102             top1_change    2    T1   dem_senate     -0.6581   0.0033 -0.6296      0.0492  109   0.0759      0.8100
+113             gini_change    1    T3  unified_dem     -0.4370   0.0010 -0.4610      0.0246   77   0.0529      0.7377
+191        hs_attain_change    2    T1    dem_house     -0.2389   0.0032  0.3727      0.3197   61   0.0759      0.9156
+192        hs_attain_change    2    T1   dem_senate      0.1446   0.0023  0.1770      0.5984   61   0.0710      0.9931
+
+R2 count q_rotation<.05: 0 of 210
+R1 count q_trend<.05: 3
+
+R3
+                                      sample          outcome  n_D  n_R  diff_D_minus_R  p_perm  p_welch  q_bh_within_sample
+0                   post-WWII terms (1949+)    gdp_pc_growth    9   10           1.104   0.035    0.036               0.195
+1                   post-WWII terms (1949+)     unemp_change    9   10          -0.710   0.001    0.001               0.011
+2                   post-WWII terms (1949+)        inflation    9   10           0.064   0.955    0.954               0.966
+5                   post-WWII terms (1949+)   poverty_change    8    8          -0.522   0.056    0.059               0.195
+7                   post-WWII terms (1949+)      gini_change    9   10          -0.245   0.044    0.047               0.195
+10                  post-WWII terms (1949+)  life_exp_change    8   10          -0.010   0.948    0.917               0.966
+14  excl. Depression/WWII terms (1929-1948)    gdp_pc_growth   11   15           0.606   0.282    0.288               0.657
+15  excl. Depression/WWII terms (1929-1948)     unemp_change   11   15          -0.385   0.052    0.055               0.269
+16  excl. Depression/WWII terms (1929-1948)        inflation   11   15           1.806   0.085    0.109               0.296
+19  excl. Depression/WWII terms (1929-1948)   poverty_change    8    8          -0.522   0.058    0.059               0.269
+21  excl. Depression/WWII terms (1929-1948)      gini_change    9   10          -0.245   0.040    0.047               0.269
+24  excl. Depression/WWII terms (1929-1948)  life_exp_change   10   15           0.051   0.667    0.669               0.849
+28                          all terms 1901+    gdp_pc_growth   15   16           1.952   0.086    0.088               0.240
+29                          all terms 1901+     unemp_change   15   16          -0.778   0.015    0.024               0.202
+30                          all terms 1901+        inflation   15   16           2.273   0.042    0.044               0.202
+33                          all terms 1901+   poverty_change    8    8          -0.522   0.058    0.059               0.202
+35                          all terms 1901+      gini_change    9   10          -0.245   0.044    0.047               0.202
+38                          all terms 1901+  life_exp_change   14   16           0.084   0.434    0.436               0.759
+
+R4 ML
+                   outcome  n_oos  mse_base  mse_with_party  oos_gain_pct  null_mean_gain_pct  p_perm   q_bh
+0           gdp_pc_growth     95    23.789          23.167         2.616               3.213   0.672  0.794
+1            unemp_change     95     3.146           3.204        -1.839              -1.041   0.637  0.794
+2               inflation     95     7.686           7.805        -1.537              -6.139   0.199  0.517
+3        real_wage_growth     28     1.551           1.591        -2.580              -3.506   0.418  0.752
+4          poverty_change     34     0.343           0.282        17.890              -3.043   0.015  0.194
+5             top1_change     77     0.492           0.488         0.661              -0.490   0.299  0.647
+6             gini_change     43     0.202           0.214        -6.062              -9.940   0.463  0.752
+7         real_oil_return     95   634.395         640.737        -1.000              -0.086   0.950  1.000
+8   real_commodity_return     79    12.239          12.229         0.080              -8.941   0.144  0.517
+9         life_exp_change     90     0.202           0.885      -338.023               5.478   1.000  1.000
+10        inf_mort_change     43     0.010           0.010        -5.876              -3.571   0.547  0.790
+11       hs_attain_change     29     0.099           0.104        -4.981             -11.641   0.174  0.517
+12       ba_attain_change     29     0.113           0.111         1.379              -1.064   0.184  0.517
