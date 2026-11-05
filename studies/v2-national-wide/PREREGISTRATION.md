@@ -243,6 +243,12 @@ Newey–West (HAC) p-values are reported alongside.
 **Equivalence.** TOST at α = 0.05 against each outcome's SESOI. An outcome is "no meaningful effect" only
 if its 90% confidence interval lies entirely inside ±SESOI.
 
+**Where SESOI comes from (to be settled in `expectations.xlsx`, "How to use" sheet).** Two rules:
+(a) hand-set per outcome, as in v1 (column K of the workbook); (b) data rule: 0.3 standard deviations of the
+outcome's term-average values, computed from the data without reference to party. Because the data rule never
+looks at party, it can be computed after the data pull without biasing the test. The workbook records which rule
+is primary and which is the sensitivity check.
+
 **Verdicts, fixed now:**
 
 | Result | Verdict |
@@ -262,6 +268,10 @@ and will be weaker. Inconclusive results are expected and will be reported as su
 ---
 
 ## 10. Expectations table (context, not evidence)
+
+**The authoritative, row-by-row version is `expectations.xlsx`** (one row per confirmatory test group, with
+defaults, the researcher's own expectations, and keep/cut decisions). It is frozen with this file. The table below
+is the summary.
 
 This records what each side commonly *claims* its policies deliver, written down before the results.
 A result that runs against a side's own claim is flagged **"against expectation"** in write-ups, as human
