@@ -52,13 +52,16 @@ below matched.
 | `eia/EIA_MER_T01.01__TEPRBUS_annual.csv` | EIA Monthly Energy Review, Table 1.1 | csv.php?tbl=T01.01, MSN `TEPRBUS` total primary energy production, annual (YYYY13) rows (see `eia/eia_provenance.json`) | A25 | 2026-11-06 |
 | `shiller/SHILLER_ie_data__JanDec_1899plus.csv` | Robert Shiller, `ie_data.xls` (now hosted at shillerdata.com, linked from his Yale data page) | sheet Data: January and December rows, P, D, CPI, real total return price (see `shiller/shiller_provenance.json`) | A20 | 2026-11-06 |
 | `voteview/HSall_members.csv` | Voteview | static/data/out/members/HSall_members.csv (complete file) | `voteview/HSall_parties.csv` | Voteview | static/data/out/parties/HSall_parties.csv (complete file) | C, E cross-check | 2026-11-06 |
+| `omb/OMB_hist01z2_fy2027.xlsx` | OMB Historical Tables, FY2027 Budget | Table 1.2, receipts/outlays/surplus as % of GDP (complete file; see `omb/omb_provenance.json`) | A16, A21 check | 2026-11-06 |
+| `omb/OMB_hist03z1_fy2027.xlsx` | OMB Historical Tables, FY2027 Budget | Table 3.1, outlays by function incl. national defense, $ and % GDP, 1940+ (complete file) | defense luck control | 2026-11-06 |
+| `omb/OMB_hist07z1_fy2027.xlsx` | OMB Historical Tables, FY2027 Budget | Table 7.1, federal debt at end of year, incl. held by the public % GDP, 1940-2025 (complete file) | A15 (1940+) | 2026-11-06 |
 
 FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves incomplete periods blank (e.g. 2026).
 
 `_transcripts/` keeps the exact text copied out of the browser and the two scripts that rebuilt the files from it
 (`decode_fred.py`, `decode_owid.py`), so each rebuild can be re-run and re-checked.
 
-**Large files** (Voteview) were fetched the same way, then saved through the browser's own download (approved by the researcher
+**Large and binary files** (Voteview, OMB) were fetched the same way, then saved through the browser's own download (approved by the researcher
 2026-11-06) and copied here; the copy's SHA-256 equals the hash the browser computed on the fetched bytes.
 
 ## Still to pull (all sites approved by the researcher on 2026-11-06)
@@ -66,7 +69,6 @@ FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves inc
 | Item | Planned source |
 | --- | --- |
 | A19 homicide rate 1900+ | CDC/NCHS vital statistics (HSUS for early years); no long-run US series found on OWID |
-| A15/A21 check; defense % GDP | OMB Historical Tables 1.2, 3.1, 7.1 |
 | B2, B4 income and wealth shares | WID (`sptinc`, `shweal`, p0p50 / p50p90 / p90p100 / p99p100) |
 | B3 wage percentiles | EPI State of Working America Data Library |
 | B12 regional per-capita income | BEA regional accounts (SAINC1, 8 regions) |

@@ -1,0 +1,29 @@
+{
+ "OMB_hist01z2_fy2027.xlsx": {
+  "url": "https://www.whitehouse.gov/wp-content/uploads/2026/04/hist01z2_fy2027.xlsx",
+  "table": "OMB Historical Table 1.2: Summary of Receipts, Outlays, and Surpluses or Deficits as Percentages of GDP, 1930-2031 (FY2027 Budget)",
+  "file_sha256": "c03b39ff14f203587c498231e375bc9448055a44a9dab8d35cbaf70ccea82b43",
+  "file_bytes": 16491,
+  "server_last_modified": "Fri, 03 Apr 2026 13:38:38 GMT",
+  "extract": "complete file; fetched same-origin in the built-in browser (SHA-256 computed there), saved via browser download, copied here; hash matches. ",
+  "pulled": "2026-11-06"
+ },
+ "OMB_hist03z1_fy2027.xlsx": {
+  "url": "https://www.whitehouse.gov/wp-content/uploads/2026/04/hist03z1_fy2027.xlsx",
+  "table": "OMB Historical Table 3.1: Outlays by Superfunction and Function, 1940-2031 (FY2027 Budget)",
+  "file_sha256": "47864b5078698919c3237038ad7296fb7aeb62f6942c3d8acccf98ad0a7122f7",
+  "file_bytes": 40892,
+  "server_last_modified": "Fri, 03 Apr 2026 13:38:43 GMT",
+  "extract": "complete file; fetched same-origin in the built-in browser (SHA-256 computed there), saved via browser download, copied here; hash matches. ",
+  "pulled": "2026-11-06"
+ },
+ "OMB_hist07z1_fy2027.xlsx": {
+  "url": "https://www.whitehouse.gov/wp-content/uploads/2026/04/hist07z1_fy2027.xlsx",
+  "table": "OMB Historical Table 7.1: Federal Debt at the End of Year, 1940-2025 (FY2027 Budget)",
+  "file_sha256": "c3cfce645fe7e4eb9beeb46a970e2b0b30301f02f03f3e5461e9950538641ff9",
+  "file_bytes": 17295,
+  "server_last_modified": "Fri, 03 Apr 2026 13:38:50 GMT",
+  "extract": "complete file; fetched same-origin in the built-in browser (SHA-256 computed there), saved via browser download, copied here; hash matches. ",
+  "pulled": "2026-11-06"
+ }
+}
