@@ -22,3 +22,7 @@ scratch/
 tmp/
 *.log.tmp
 data/cache/
+
+# Office lock files
+~$*
+studies/v2-national-wide/expectations.xlsx
