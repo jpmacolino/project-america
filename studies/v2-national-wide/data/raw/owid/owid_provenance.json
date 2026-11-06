@@ -1,0 +1,34 @@
+{
+ "OWID_crude-oil-prices__OWID_WRL.csv": {
+  "url": "https://ourworldindata.org/grapher/crude-oil-prices.csv?csvType=full",
+  "full_file_sha256": "196833e9efe65da57482d3f6273309b512ebbf13b0a69f76dddddd407f917bd6",
+  "full_file_bytes": 4916,
+  "entity": "World",
+  "extract_sha256": "343664743eb3d21d24945912f5785115e8b21a6451fae946a53820b3b0a7baa9",
+  "citation": "Energy Institute based on S&P Global Platts \u2013 Statistical Review of World Energy (2026) \u2013 with major processing by Our World in Data | updated 2026-06-30"
+ },
+ "OWID_life-expectancy__USA.csv": {
+  "url": "https://ourworldindata.org/grapher/life-expectancy.csv?csvType=full",
+  "full_file_sha256": "c304603fb8a7da263619a8ae43b7097f35b648c458855e23f1c4ef8f2ae75c01",
+  "full_file_bytes": 605250,
+  "entity": "United States",
+  "extract_sha256": "bac9ff0df2800db8114ce1f2fa2cc5a67f0f7b69326990663ea2a32744442f6b",
+  "citation": "Riley (2005); Zijdeman et al. (2015); HMD (2025); UN WPP (2024) \u2013 with major processing by Our World in Data | updated 2025-10-22"
+ },
+ "OWID_infant-mortality__USA.csv": {
+  "url": "https://ourworldindata.org/grapher/infant-mortality.csv?csvType=full",
+  "full_file_sha256": "b7241a16221a527d3f13da1b52ac76ad474ef59e07d86c8616396f173670b944",
+  "full_file_bytes": 402599,
+  "entity": "United States",
+  "extract_sha256": "b78759cb5f22288b009b71ba6dbae9c50976b9d5563eaee223f0fb8efbafdd04",
+  "citation": "United Nations Inter-agency Group for Child Mortality Estimation (2025) \u2013 processed by Our World in Data | updated 2026-06-09"
+ },
+ "OWID_income-share-top-1-before-tax-wid__USA.csv": {
+  "url": "https://ourworldindata.org/grapher/income-share-top-1-before-tax-wid.csv?csvType=full",
+  "full_file_sha256": "cfbf51674a28787a9b0d7a5c2fe97abf448eb8e04d2f00f0de28274664677f68",
+  "full_file_bytes": 94332,
+  "entity": "United States",
+  "extract_sha256": "7eadacd96e5eca7687aad4ec4ff011dd313dabcf51435dcf8bdd2010159a8bc7",
+  "citation": "World Inequality Database (WID.world) (2026) \u2013 with major processing by Our World in Data | updated 2026-06-18"
+ }
+}

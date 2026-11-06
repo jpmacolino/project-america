@@ -1,0 +1,673 @@
+<!DOCTYPE html><html><head><title>R: US GDP per capita with presidents and wars</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css">
+<script type="text/javascript">
+const macros = { "\\R": "\\textsf{R}", "\\mbox": "\\text", "\\code": "\\texttt"};
+function processMathHTML() {
+    var l = document.getElementsByClassName('reqn');
+    for (let e of l) { katex.render(e.textContent, e, { throwOnError: false, macros }); }
+    return;
+}</script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+    onload="processMathHTML();"></script>
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body><div class="container"><main>
+
+<table style="width: 100%;"><tr><td>USGDPpresidents</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>
+US GDP per capita with presidents and wars
+</h2>
+
+<h3>Description</h3>
+
+<p>It is commonly claimed that Franklin Roosevelt 
+(FDR) did not end the Great Depression:  World 
+War II (WW2) did.  This is supported by the 10.6
+percent growth per year in real Gross Domestic
+Product (GDP) per capita seen in the standard 
+GDP estimates from 1940 to 1945.  It is also 
+supported by the rapid decline in unemployment
+during the war.  
+</p>
+<p>However, no comparable growth spurts in GDP per 
+capita catch the eye in a plot of 
+<code>log(GDP per capita)</code> from 1790 to 2024,
+whether associated with a war or not, using data
+from Measuring Worth.  The only other features 
+of that plot that seem visually comparable are 
+the economic disaster of Herbert Hoover's
+presidency (when GDP per capital fell by 10 
+percent per year, 1929-1932), the impressive 
+growth of the US economy during the first seven
+years of Franklin Roosevelt's presidency (6.4
+percent per year, 1933-1940), and the post-World
+War II recession (when GDP per capita fell by 
+7.9 percent per year, 1945-1947).  (NOTE:  The 
+web site for Measuring Worth, 
+<code>https://measuringworth.com/</code> still works, 
+but has not always been maintained to current
+internet security standards.  Therefore, the 
+link is provided here in text but not as a link.)
+</p>
+<p>Closer inspection of this plot suggests that the 
+US economy has generally grown faster after FDR
+than before.  This might plausibly be attributed 
+to 
+<a href="https://en.wikipedia.org/wiki/John_Maynard_Keynes">
+&quot;The Keynesian Ascendancy 1939-1979&quot;</a>.  
+</p>
+<p>Unemployment dropped during the First World War 
+as it did during WW2.  Comparable unemployment 
+data are not available for the U.S. during other
+major wars, most notably the 
+<a href="https://en.wikipedia.org/wiki/American_Civil_War">American Civil War</a> and the 
+<a href="https://en.wikipedia.org/wiki/Mexican-American_War">Mexican-American War</a>.  
+</p>
+<p>This data set provides a platform for testing 
+the effects of presidency, war, and Keynes.  It
+does this by combining the numbers for US
+population and real GDP per capital dollars from
+Measuring Worth with the presidency and a list 
+of major wars and an estimate of the battle
+deaths by year per million population.  (As 
+noted above, the web address for measuring worth, 
+<code>https://measuringworth.com/</code>, often gives 
+security warnings but still seems to provide the 
+data as before.)  
+</p>
+
+
+<h3>Usage</h3>
+
+<pre><code class='language-R'>data(USGDPpresidents)
+</code></pre>
+
+
+<h3>Format</h3>
+
+<p>A <code>data.frame</code> containing 259 
+observations on the following variables:
+</p>
+
+<dl>
+<dt>Year</dt><dd> 
+<p>integer: the year, 
+<code>c(seq(1610, 1770, 10), 1774:2024)</code>
+</p>
+</dd> 
+<dt>CPI</dt><dd>
+<p>Numeric:  U. S. Consumer Price Index per
+Officer and Williamson (2022), starting in 
+1774.  Average 1982-84 = 100.  
+</p>
+</dd>    
+<dt>GDPdeflator</dt><dd>
+<p>numeric:  Implicit price deflators for 
+Gross Domestic Product with 2017 = 100 
+per Williamson (2025). 
+</p>
+</dd>
+<dt>population.K</dt><dd> 
+<p>integer:  US population in thousands.  
+</p>
+<p>Population figures for 1610 to 1780 came 
+from Springston (2013).  The rest came 
+from Johnston and Williamson.  (The 
+early population figures reflect only 
+the European settlers in the British 
+colonies that eventually became the 
+US.)
+</p>
+</dd>
+<dt>realGDPperCapita</dt><dd>
+<p>numeric:  real Gross Domestic Product 
+(GDP) per capita in 2017 dollars since 
+1790.   
+</p>
+<p>Real <code>GDP</code> = 
+<code>population.K*realGDPperCapita</code>,
+in thousands.  
+</p>
+<p>Current or nominal <code>GDPperCapita</code> =
+<code>realGDPperCapita*GDPdeflator/100</code>.
+</p>
+</dd> 
+<dt>executive</dt><dd>
+<p><code>ordered</code>:  Crown of England
+through 1774, followed by the
+<code>"ContinentalCongress"</code> and the 
+<code>"ArticlesOfConfederation"</code> until
+Washington, who became President under the
+current base constitution in 1789.  Two
+nineteenth century presidents are not 
+listed here (William Henry Harrison and 
+James A. Garfield), because they died so 
+soon after inauguration that any 
+contribution they made to the economic 
+growth of the nation might seem too slight 
+to measure accurately in annual data like 
+this;  their contributions therefore 
+appear combined with their replacements 
+(John Tyler and Chester A. Arthur, 
+respectively).  The service of two other 
+presidents is officially combined here:  
+&quot;Taylor-Fillmore&quot; refers to the 16 months
+served by Zachary Taylor with the 32 months 
+of Millard Fillmore.  These modifications 
+make 
+<a href="https://en.wikipedia.org/wiki/Barack_Obama">Barack Obama</a>
+number 41 on this list, even though he's 
+the 44th president of the U.S.  
+</p>
+</dd>
+<dt>war</dt><dd>
+<p><code>ordered</code>:  This lists the 
+major wars in US history by years 
+involving active hostilities.  A war is 
+&quot;major&quot; for present purposes if it met 
+two criteria:  
+</p>
+<p>(1) It averaged at least 10 battle deaths 
+per year per million US population.  
+</p>
+<p>(2) It was listed in one of two lists of 
+wars:  
+For wars since 1816, it must have appeared 
+in the 
+<a href="https://correlatesofwar.org/">Correlates of 
+War</a>.  For wars between 1790 and 1815, it 
+must have appeared in the Wikipedia 
+<a href="https://en.wikipedia.org/wiki/List_of_wars_involving_the_United_States">
+&quot;List of wars involving the United States&quot;</a>.  
+</p>
+<p>The resulting list includes a few 
+adjustments to the list of wars that might 
+come readily to mind for people moderately
+familiar with US history.    
+</p>
+<p>A traditional list might start with the
+American Revolution, the War of 1812, the
+Mexican-American war, the Civil War, the
+Spanish-American war, World Wars I and II,
+Korea, and Vietnam.  In addition, the 
+<a href="https://en.wikipedia.org/wiki/Northwest_Indian_War">
+Northwest Indian War</a> involved very roughly 
+30 battle deaths per year per million
+population 1785-1795.  This compares with the
+roughly 100 battle deaths per year 1812-1815
+for the 
+<a href="https://en.wikipedia.org/wiki/War_of_1812">
+War of 1812</a>.  
+</p>
+<p>For present purposes, the Spanish-American 
+War is combined with the lesser-known 
+American-Philippine War:  The latter 
+involved 50 percent more battle deaths but 
+over a longer period of time and arguably 
+with less impact on the stature of the US as 
+a growing world power.  However, its 
+magnitude suggest it might have impacted the 
+US economy in a way roughly comparable to 
+the Spanish-American war.  The two are
+therefore listed here together as 
+&quot;Spanish-American-Philippine&quot; war.  
+</p>
+<p><a href="https://correlatesofwar.org/">The Correlates of 
+War (COW)</a> data include multiple US uses 
+of military force  during the Vietnam War 
+era.  It starts with &quot;Vietnam Phase 1&quot;, 
+1961-65, with 506 battle deaths in the COW 
+data base.  It includes the &quot;Second 
+Laotian&quot; war phases 1 and 2, plus 
+engagement with a &quot;Communist Coalition&quot; 
+and Khmer Rouge as well as actions in the
+Dominican Republic and Guatemala.  The 
+current <code>data.frame</code> includes 
+only &quot;Vietnam&quot;, referring primarily to 
+COW's &quot;Vietnam War, Phase 2&quot;, 1965-1973.  
+The associated battle deaths include 
+battle deaths from these other, lesser
+concurrent conflicts.  
+</p>
+<p>The COW data currently ends in 2007.  
+However, the post-2000 conflicts in 
+Afghanistan and Iraq averaged less than 
+1,000 battle deaths per year or roughly 3
+battle deaths per year per million population.
+This is below the threshold of 10 battle 
+deaths per year per million population.  
+This in turn suggests that any impact of 
+those conflicts on the US economy might be
+small and difficult to estimate.
+</p>
+</dd>
+<dt>battleDeaths</dt><dd>
+<p>numeric:  Numbers of battle deaths by year
+estimated by allocating to the different 
+years the totals reported for each major war 
+in proportion to the number of days 
+officially in conflict each year.  The 
+totals were obtained (in August-September 
+2015) from 
+<a href="https://correlatesofwar.org/">The 
+Correlates of War</a> data for conflicts since
+1816 and from Wikipedia for previous wars 
+back to 1774, as noted above.  
+</p>
+</dd>
+<dt>battleDeathsPMP</dt><dd>
+<p>numeric:  battle deaths per million 
+population = 
+<code>1000*battleDeaths/population.K</code>.   
+</p>
+</dd>
+<dt>Keynes</dt><dd>
+<p>integer taking the value 1 between 1939 and
+1979 and 0 otherwise, as suggested by the
+section entitled &quot;The Keynesian Ascendancy 
+1939-1979&quot; in the Wikipedia article on     
+<a href="https://en.wikipedia.org/wiki/John_Maynard_Keynes">
+John Maynard Keynes</a>. 
+</p>
+</dd>
+<dt>unemployment</dt><dd>
+<p>Estimated US unemployment rate in percent 
+per the sources cited in the 
+<a href="https://en.wikipedia.org/wiki/Unemployment_in_the_United_States#Historical_unemployment_rate_charts">Historical unemployment rate charts
+</a> section of the Wikipedia article on 
+<a href="https://en.wikipedia.org/wiki/Unemployment_in_the_United_States">Unemployment in the United States
+</a>. 
+</p>
+</dd>
+<dt>unempSource</dt><dd>
+<p><code>ordered</code> giving the source for 
+US unemployment:  
+</p>
+
+<dl>
+<dt>1610-1799</dt><dd><p><code>&lt;NA&gt;</code></p>
+</dd>
+<dt>1800-1889</dt><dd><p>Lebergott</p>
+</dd>
+<dt>1890-1929</dt><dd><p>Romer</p>
+</dd>
+<dt>1930-1939</dt><dd><p>Coen</p>
+</dd>
+<dt>1940-present</dt><dd><p>BLS</p>
+</dd>
+</dl>
+
+<p>Clearly, the more recent numbers should be 
+more accurate.  
+</p>
+</dd>
+<dt>fedReceipts, fedOutlays, fedSurplus</dt><dd>
+<p>Receipts and Outlays of the US federal 
+government in millions of current dollars.  
+</p>
+<p>For data beginning with 1901, these are 
+from the US federal budget from The White 
+House (2022).  Earlier data are from 
+series Y 335-337 in US Census Bureau 
+(1975).  As of 2022-02-22 the data from 
+The White House included aggregations for 
+1789-1849 and 1850-1900, which matched 
+the totals of Y 335-337 for those two 
+sets of years.  The numbers from 1901 to 
+1933 are the same in both sources.  
+</p>
+<p>On 2022-02-22, we used The White House 
+(2022) for the more recent numbers with 
+one exception: Between 1976 and 1977 the 
+fiscal year was changed from starting July 
+1 to October 1. July, August, and September, 
+1976, is called the &quot;transitional quarter&quot;, 
+and has been deleted from this dataset.  
+</p>
+<p>On 2025-01-22, the comparable data was
+found on a different web address but seemed
+to be largely the same except that it said 
+it was updated to 2023-03-28, just over a 
+month after the previous update. That 
+gave data starting in 2022 as &quot;estimates&quot;. 
+Since we could not find better numbers, 
+we used those. 
+</p>
+<p>NOTES: 
+</p>
+<p>The numbers for 1843 are for only the 
+first half of the year, January 1 through 
+June 30.  This explains why the numbers for 
+1843 are only roughly half of the 
+corresponding values for 1844 and 1845.  
+</p>
+<p>Also, the numbers for 1791 are actually for 
+1789-1791.  However, those numbers seem 
+comparable to those for 1792 and 1793, so
+it is listed as only for one year rather 
+than three.  
+</p>
+</dd>
+<dt>fedDebt</dt><dd>
+<p>US federal government debt in current 
+dollars per <code>FiscalData</code> (2025).  
+This matches Y 338 in United States 
+Census Bureau (1975) 1921-1939 but not 
+earlier, and Y 338 ends with 1939.  
+Between 1921 and 1939 these numbers are
+as of June 30.  Between 1843 and 1920 
+they are as of July 1.  The earlier 
+numbers are as of January 1.  
+</p>
+<p>These numbers are NOT a simple 
+<code>cumsum</code> of 
+<code>fedSurplus</code>. It's not clear 
+the sources of the discrepancies, 
+but the following seem likely: First, 
+the published budget may not include 
+interest on the national debt. Second, 
+there are likely expenditures / 
+outlays that are &quot;Off-budget&quot; and 
+perhaps otherwise hidden from the 
+public.
+</p>
+<p><code>FiscalData</code> (2025) includes debt 
+for both January 1 (20 million) and 
+July 1 (33 million) for 1843.  For
+present purposes, we omit the 
+January 1 number.  This overstates
+the volatility of the national 
+debt during that period, showing 
+it rising from 14 million in 
+1842 (January 1) to 33 million 
+in 1843 (July 1), being 18 not 
+12 months.  The alternative would
+be to delete the 33 million, but 
+that would understate the volatility 
+of the debt during that period. 
+</p>
+<p>Prior to 1844, the national debt was 
+reported for January 1. Between 1843 
+and 1920, it was reported for July 1. 
+From 1921 to 1976, it was reported 
+for June 28, 29 or 30, usually for 
+June 30; four years in that period it 
+was reported for June 29 and once for 
+June 28. Since 1977, it has been 
+reported for September 28, 29 or 30, 
+usually for September 30, only once 
+for September 28 and once for 
+September 29. 
+</p>
+</dd>
+<dt>fedReceipts_pGDP, fedOutlays_pGDP, 
+fedSurplus_pGDP, fedDebt_pGDP</dt><dd>
+<p>numeric = <code>fedReceipts</code>, 
+<code>fedOutlays</code>, <code>fedSurplus</code>, 
+and <code>fedDebt</code> as a portion of GDP, 
+which is <code>population.K * 
+      realGPDperCapita / (.01*GDPdeflator)</code>. 
+</p>
+<p>For the single year 1843, <code>fedReceipts</code>, 
+<code>fedOutlays</code>, and <code>fedSurplus</code> 
+were for only the first six months;  to 
+compute <code>*_pGDP</code> for these numbers 
+for 1843 only, the denominator was cut in half.
+</p>
+</dd>
+</dl>
+
+
+
+<h3>Details</h3>
+
+<p><code>rownames(USGDPpresidents) = Year</code>
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Spencer Graves</p>
+
+
+<h3>Source</h3>
+
+<p>Robert M. Coen (1973) Labor Force and 
+Unemployment in the 1920's and 1930's: A 
+Re-Examination Based on Postwar Experience&quot;, 
+The Review of Economics and Statistics, 55(1): 
+46-55. 
+</p>
+<p><code>FiscalData</code> (2024) 
+<a href="https://fiscaldata.treasury.gov/datasets/historical-debt-outstanding/historical-debt-outstanding">&quot;Historical Debt Outstanding&quot;</a>, 
+accessed 2025-01-22. 
+</p>
+<p>Louis Johnston and Samuel H. Williamson, 
+&quot;What Was the U.S. GDP Then?&quot;, Measuring Worth, 
+accessed 2022-02-22.  (NOTE:  This came from 
+<code>https://www.measuringworth.org/usgdp/</code>.  
+this web link generally works as of 2022-02-22.
+However, in the past it has sometimes returned
+a warning, e.g., &quot;SSL certificate problem&quot;.  
+The web site seems to be good but not 
+maintained to current security standards.)  
+</p>
+<p>Stanley Lebergott (1964). Manpower in Economic 
+Growth: The American Record since 1800. Pages 
+164-190. New York: McGraw-Hill.  Cited from 
+<a href="https://en.wikipedia.org/wiki/Unemployment_in_the_United_States#Historical_unemployment_rate_charts">Wikipedia, 
+&quot;Unemployment in the United States&quot;</a>, accessed 
+2016-07-08.  
+</p>
+<p>Lawrence H Officer and Samuel H. Williamson, 
+'The Annual Consumer Price Index for the United 
+States, 1774-Present,' MeasuringWorth, 
+2022-02-22.         
+</p>
+<p>Christina Romer (1986). &quot;Spurious Volatility in 
+Historical Unemployment Data&quot;, The Journal of 
+Political Economy, 94(1): 1-37.
+</p>
+<p>Sarkees, Meredith Reid; Wayman, Frank (2010). 
+<a href="https://correlatesofwar.org/data-sets/COW-war/">
+&quot;The Correlates of War Project: COW War Data, 1816 - 
+2007 (v4.0)&quot;</a>, accessed 2015-09-02.  
+</p>
+<p>The White House (2022). 
+<a href="https://www.whitehouse.gov/omb/information-resources/budget/historical-tables/">
+On 2025-08-22, I saw &quot;Historical Tables&quot; in 3 places on that 
+page.</a> I clicked on the bottom one and got, 
+&quot;BUDGET-2026-HIST.xlsx&quot;. The file I got doing this on 
+2025-01-22 included &quot;Table 1.1-Summary of Receipts, Outlays, 
+and Surpluses or Deficits (-): 1789-2026&quot; included budget 
+forecasts. The version of this table I got 2025-08-22 
+included data through 2024 but no forecasts. 
+</p>
+<p>United States Census Bureau (1975) 
+<a href="https://www.census.gov/library/publications/1975/compendia/hist_stats_colonial-1970.html">Bicentennial Edition: Historical Statistics of the United States, Colonial Times to 1970</a>, 
+Part 2.  Chapter Y. Government, accessed 2022-02-22.  
+</p>
+<p>Wikipedia, <a href="https://en.wikipedia.org/wiki/List_of_wars_involving_the_United_States">&quot;List of wars involving the United States&quot;</a>, 
+accessed 2015-09-13.  
+</p>
+<p><a href="https://en.wikipedia.org/wiki/Unemployment_in_the_United_States#Historical_unemployment_rate_charts">Wikipedia, 
+&quot;Unemployment in the United States&quot;</a>.  See also <a href="https://en.wikipedia.org/wiki/User_talk:Peace01234#Unemployment_Data">https://en.wikipedia.org/wiki/User_talk:Peace01234#Unemployment_Data</a>.  
+Accessed 2016-07-08.  
+</p>
+<p>The unemployment data since 1940 are from 
+series <code>LNS14000000</code> from the Current
+Population Survey.  These data are available as 
+a monthly series from the 
+<a href="https://www.bls.gov/cps/">Current Population Survey of the Bureau of Labor Statistics</a>. 
+</p>
+<p><a href="https://web.archive.org/web/20210216112807/http://www.yttwebzine.com/yesterday/2013/10/28/75757/population_13_colonies_chart">Chuck Springston, 
+&quot;Population of the 13 Colonies 1610-1790&quot;, 
+October 28, 2013</a>
+</p>
+<p><a href="https://www.measuringworth.com/datasets/usgdp/"> Samuel H. Williamson, &quot;What Was the U.S. GDP Then?&quot; MeasuringWorth, 2025</a>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre><code class='language-R'>data(USGDPpresidents)
+##
+## FUNCTION TO plot GDP, Presidents and Wars 
+## 
+plotUSGPDpresidents &lt;- function(y, Ylab, Scale=1, 
+        Ylim=NA, Log='y', x='Year', Xmin=NA, Type='l', 
+        epocs = c(1929, 1933, 1945), epocy=c(.2, .8), 
+        epocNames = c('Hoover', 'FDR'), epocex=c(0.9, 1.1), 
+        war='war', warShade=c(lty='dotted', col='grey'), 
+        Data=USGDPpresidents, ...){
+  ##
+  ## 1. y
+  ##
+  Y &lt;- (Scale* Data[, y])
+  if(any(is.na(Ylim))){
+    if(is.na(Ylim[1])) {
+      if(length(grep('y',Log)&gt;0)){
+        Y0 &lt;- (Y&lt;=0)
+        n0 &lt;- sum(Y0, na.rm=TRUE)
+        if(n0&gt;0){
+          cat(n0, ' nonpositive observations ignored/n')
+          Y[Y0] &lt;- NA
+        }
+      } 
+      Ylim[1] &lt;- min(Y, na.rm=TRUE)
+    }
+    if(length(Ylim)&lt;2 || is.na(Ylim[2])){
+      Ylim[2] &lt;- max(Y, na.rm=TRUE)
+    }
+  }
+  ##
+  ## 2. Xmin &gt; Xlim
+  ##
+  if(is.na(Xmin)){
+    imin &lt;- which.max(!is.na(Y))
+    Xmin &lt;- Data[imin, x]
+  }
+  Xlim &lt;- c(Xmin, max(Data[, x]))
+  ##
+  ## 3. plot
+  ##
+  plot(Data[, x], Y, log=Log, type=Type, 
+       xlim=Xlim, xlab='', ylim=Ylim,
+       ylab=Ylab, las=1, ...)  
+  ##
+  ## 4. epocs
+  ##
+  abline(v=epocs, lty='dashed')
+  if(length(grep('y',Log)&gt;0)){
+    lYlim &lt;- log(Ylim)
+    yep &lt;- exp(epocy*lYlim[1]+(1-epocy)*lYlim[2])
+  } else {
+    yep &lt;- (epocy*Ylim[1]+(1-epocy)*Ylim[2])
+  }
+  for(i in 1:length(epocy)){
+    ix &lt;- mean(epocs[i+0:1])
+    text(ix, yep[i], epocNames[i], srt=90, 
+         cex=epocex[i])
+  }
+  ##
+  ## 5. wars
+  ##
+  if(!is.null(war) &amp;&amp; !is.na(war) &amp;&amp;
+     !is.na(match(war, names(Data))))  {
+    selWar &lt;- (Data[, war]!='')
+    abline(v=Data[selWar, x], lty=warShade['lty'], 
+           col=warShade['col'])
+  }
+}
+##
+##** Plot the first four variables
+##
+plotUSGPDpresidents('CPI', Ylab='Consumer Price Index')
+plotUSGPDpresidents('GDPdeflator', Ylab='GDP deflator')
+plotUSGPDpresidents('population.K', Ylab='population (M)', 
+                   Scale=0.001)
+plotUSGPDpresidents('realGDPperCapita', 
+                   Ylab='GDP per capita (2017K$)', Scale=0.001)
+
+##
+##** Table exective and war
+##
+table(USGDPpresidents[, 'executive'])
+table(USGDPpresidents[, 'war'])
+
+##
+##** plot battleDeaths 
+##** battledeathsPMP = per million population
+##
+plotUSGPDpresidents('battleDeaths', Ylab='battle deaths (K)', 
+                   Scale=0.001, lwd=3)
+
+(MAw &lt;- grep('Mex', USGDPpresidents[, 'war']))
+USGDPpresidents[MAw,]
+
+plotUSGPDpresidents('battleDeathsPMP', 
+                   Ylab='battle deaths per million pop', lwd=3)
+##
+##** plot Keynes
+##
+plotUSGPDpresidents('Keynes', Log='', Ylab='Keynes')
+selKeynes &lt;- (USGDPpresidents[, 'Keynes']==1)
+range(USGDPpresidents[selKeynes, 'Year'])
+##
+##** plot unemployment
+##
+plotUSGPDpresidents('unemployment', Ylab='unemployment (%)')
+# Estimated US unemployment rate in percent
+# per the sources cited in the section on 
+# "Historical unemployment rate charts"
+# in the Wikipedia article on 
+# "Unemployment in the United States"
+
+# table unemployment source
+table(USGDPpresidents[, 'unempSource'])
+
+##
+##** plot budget analyses
+##
+plotUSGPDpresidents('fedReceipts', Ylab="fed receipts ($M)")
+plotUSGPDpresidents("fedReceipts", Ylab="fed receipts ($B)", 
+                   Scale=0.001)
+abline(h=1)
+plotUSGPDpresidents("fedOutlays", Ylab="fed outlays ($B)", 
+                   Scale=0.001)
+abline(h=1)
+
+plotUSGPDpresidents("fedSurplus", Ylab="fed outlays ($B)",
+                   Log='', Scale=0.001)
+
+Surplus &lt;- with(USGDPpresidents, fedReceipts - fedOutlays)
+
+rSurp &lt;- with(USGDPpresidents, fedSurplus/Surplus)
+plot(USGDPpresidents[, 'Year'], rSurp)
+# Discrepancies less than 1 percent
+
+plotUSGPDpresidents('fedDebt', 'fed debt ($B)',
+                   Scale=1e-9)
+
+plotUSGPDpresidents('fedReceipts_pGDP', 
+                   'fed receipts % of GDP', Scale=100)
+plotUSGPDpresidents('fedOutlays_pGDP', 
+                   'fed outlays % of GDP', Scale=100)
+plotUSGPDpresidents('fedSurplus_pGDP', 
+                   'fed surplus % of GDP', Scale=100, Log='')
+
+plotUSGPDpresidents('fedDebt_pGDP', 
+                   'fed debt % of GDP', Scale=100)
+(debtPrng &lt;- range(USGDPpresidents[, 'fedDebt_pGDP'], na.rm=TRUE))
+plotUSGPDpresidents('fedDebt_pGDP', 
+                   'fed debt % of GDP', Scale=100, 
+                   Ylim=c(1, 100*debtPrng[2]))
+abline(h=100)
+</code></pre>
+
+</main>
+
+</div>
+</body></html>
