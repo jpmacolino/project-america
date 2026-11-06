@@ -2,8 +2,9 @@
 
 Pull began 2026-11-06 (after tag `v2-prereg`, which is on GitHub). Every file in this folder is listed here with
 its source URL, series ID and pull date. Files are stored exactly as the source served them, or, where a source
-serves a large multi-country file, as a verbatim row extract with the full file's SHA-256 recorded
-(`owid/owid_provenance.json`). `checksums.sha256` covers every file.
+serves a large multi-country file or an Excel workbook, as a verbatim row/column extract with the full file's SHA-256
+recorded (`owid/owid_provenance.json`, `census/census_provenance.json`). Census workbooks are read in the browser by a
+small hand-written reader (unzip + sheet XML), so cell values are exactly as stored in the workbook. `checksums.sha256` covers every file.
 
 **How browser pulls were checked.** FRED, OWID and Census block scripted downloads, so (as in v1) they were
 fetched with same-origin `fetch()` in the built-in browser. The browser computed a SHA-256 of the exact text it
@@ -34,6 +35,8 @@ below matched.
 | `owid/OWID_life-expectancy__USA.csv` | OWID (Riley; Zijdeman; HMD; UN WPP) | grapher `life-expectancy` | A11 | 2026-11-06 |
 | `owid/OWID_infant-mortality__USA.csv` | OWID / UN IGME | grapher `infant-mortality` | A12 | 2026-11-06 |
 | `owid/OWID_income-share-top-1-before-tax-wid__USA.csv` | OWID / WID | grapher `income-share-top-1-before-tax-wid` | A7 | 2026-11-06 |
+| `census/CENSUS_hstpov2__colsA_D.csv` | Census CPS ASEC Historical Poverty Table 2 | hstpov2.xlsx, cols A and D, race blocks (see `census/census_provenance.json`) | A6, B6 | 2026-11-06 |
+| `census/CENSUS_hstpov3__colsA_E_M_Q.csv` | Census CPS ASEC Historical Poverty Table 3 | hstpov3.xlsx, All Races, under 18 / 18-64 / 65+ | B8 | 2026-11-06 |
 
 FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves incomplete periods blank (e.g. 2026).
 
@@ -44,7 +47,6 @@ FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves inc
 
 | Item | Planned source |
 | --- | --- |
-| A6 poverty; B6 poverty by race; B8 poverty by age | Census CPS historical poverty Tables 2 and 3 (`www2.census.gov/programs-surveys/cps/tables/time-series/historical-poverty-people/hstpov2.xlsx`, `hstpov3.xlsx`) |
 | A13, A14 attainment | Census CPS Table A-2 (`hst_attain02.xlsx`) |
 | A17 median family income 1947+ | Census Table F-7 (`.../historical-income-families/f07ar.xlsx`) |
 | B1 family income at percentile cut-offs | Census Table F-1 (`.../historical-income-families/f01ar.xlsx`) |
