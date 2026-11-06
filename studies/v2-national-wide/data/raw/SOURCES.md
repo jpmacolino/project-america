@@ -78,7 +78,7 @@ FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves inc
 
 | Item | Planned source | Status |
 | --- | --- | --- |
-| A19 homicide rate 1900+ | CDC/NCHS vital statistics (HIST290 tables 1900-98; HSUS for early years); 1999+ to be chosen | Needs a decision on sources and the pre-1933 death-registration area |
+| A19 homicide rate 1900+ | CDC/NCHS vital statistics; HSUS for early years | Researched 2026-11-06, nothing pulled; plan to be decided by the researcher. Findings: HIST290 (1900-39) has no homicide table. Machine-readable on data.cdc.gov: `nt65-c7a7` NCHS Injury Mortality (homicide deaths, population, rates) 1999-2016 and `t6u2-f84c` Mapping Injury, Overdose and Violence, national annual homicide 2019-2025. CDC WONDER covers 1968-2024 in one consistent system but requires accepting its data-use terms. Before 1968 the NCHS rates are in scanned volumes (Linder & Grove 1943 for 1900-40, death-registration states only before 1933; Grove & Hetzel 1968 for 1940-60). |
 | (All other planned sources are pulled.) | | |
 
 ## Decisions on data issues
