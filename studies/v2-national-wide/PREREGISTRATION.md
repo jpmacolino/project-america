@@ -1,14 +1,15 @@
 # Pre-registration: Study v2 — Who benefits, how long, and does ideology matter?
 
-**Status: DRAFT for review. Not yet frozen.**
-When approved, this file is committed and tagged `v2-prereg` *before any new data is pulled*.
-After the tag, the only allowed changes are entries in `DEVIATIONS.md`, each dated and explained.
+**Status: FROZEN 2026-11-06 (git tag `v2-prereg`), approved by the researcher before any new data was pulled.**
+This file and `conventional_wisdom.xlsx` are fixed as of the tag. The only allowed changes from here are entries
+in `DEVIATIONS.md`, each dated and explained.
 
 | | |
 | --- | --- |
 | Project | Project America (`C:\dev\project-america`) |
 | Builds on | Study v1, tag `v1.0-party-baseline` |
 | Drafted | 2026-11-05 |
+| Frozen | 2026-11-06, tag `v2-prereg` |
 | Folder for this study | `studies/v2-national-wide/` (v1 files at the repo root are never modified) |
 
 ---

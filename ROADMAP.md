@@ -16,7 +16,7 @@ the lives of the American people?
 | Study | Status | Tag |
 | --- | --- | --- |
 | v1: party control vs 14 national outcomes, 1900-2025 | Done, frozen | `v1.0-party-baseline` |
-| v2: wider and more rigorous national test (see below) | Pre-registration drafted; scope settled (116 tests); awaiting freeze | - |
+| v2: wider and more rigorous national test (see below) | Pre-registered (116 confirmatory tests); next: data pull | `v2-prereg` |
 | v2b: ideology (DW-NOMINATE) in place of party | After v2, same pipeline | - |
 | Luck decomposition (oil, productivity, defense, Fed shocks) | Control layer, applied to v2 and v2b | - |
 | State-level study (governors, close elections, state law) | Separate project chat | - |
