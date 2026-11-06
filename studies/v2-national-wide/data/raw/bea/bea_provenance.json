@@ -1,0 +1,17 @@
+{
+ "BEA_SAINC1__ALL_AREAS_1929_2025__regions_line3.csv": {
+  "url": "https://apps.bea.gov/regional/zip/SAINC.zip",
+  "zip_sha256": "cb28a9a200c71b48e283c4e4e6ef1b18524cb6c1edc31d7b768862c766ff770f",
+  "zip_bytes": 17620171,
+  "zip_last_modified": "Wed, 30 Sep 2026 12:51:42 GMT",
+  "member": "SAINC1__ALL_AREAS_1929_2025.csv",
+  "member_sha256": "01cf803d3dec2653e9d5a350c959d7f0e5099927841e08ba0ad9896ce2ccd5f1",
+  "member_bytes": 140809,
+  "table": "SAINC1 State annual personal income summary: personal income, population, per capita personal income",
+  "extract": "header line plus the LineCode 3 (per capita personal income, current dollars) lines for the United States (00000) and the eight BEA regions (91000-98000), verbatim, CRLF line ends as in the source",
+  "extract_sha256": "05e649d0ef5d813469178b20fd5a2330b0e12f14d8fa723075cd2a516aece058",
+  "footnotes": "1/ Census midyear population estimates. 2/ Per capita personal income = total personal income / total midyear population. * Estimates before 1950 not available for Alaska and Hawaii (Far West excludes them before 1950). All dollar estimates in current dollars (not adjusted for inflation). Last updated September 30, 2026 (revised 2009-2025).",
+  "method": "same-origin fetch() of the zip in the built-in browser, member inflated in the page (DecompressionStream); lines copied out and rebuilt by _transcripts/decode_lines.py, hash required to match",
+  "pulled": "2026-11-06"
+ }
+}

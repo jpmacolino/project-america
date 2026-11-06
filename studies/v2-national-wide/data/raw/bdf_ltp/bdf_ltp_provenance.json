@@ -1,0 +1,14 @@
+{
+ "BDF_LTP_BCLDatabase_v2.7__TFP_USA.csv": {
+  "url": "https://www.longtermproductivity.com/download/BCLDatabase_online_v2.7.xlsx (linked from https://www.longtermproductivity.com/download.html)",
+  "file_sha256": "0942674fec8ee88929c1bd16f8ddd25ccc4828eaf5c37c9a38a1b3bf497bd28c",
+  "file_bytes": 277375,
+  "file_last_modified": "Thu, 19 Feb 2026 21:57:49 GMT",
+  "vintage": "v2.7, February 2026 (download page: 19/02/2026 general review of all historical data sources)",
+  "citation": "Bergeaud, A., Cette, G. and Lecat, R. (2016): 'Productivity Trends in Advanced Countries between 1890 and 2012,' Review of Income and Wealth, 62(3), 420-444. Non-commercial use; cite the article.",
+  "extract": "sheet 'TFP', column A (year) and column X (USA), rows 1890-2024 (the last row with a USA value; the sheet runs to 2035 with blanks); cell values exactly as stored in the sheet XML. Units per cover sheet: Total Factor Productivity, $US 2020 PPP based (a level; growth = log difference).",
+  "extract_sha256": "3e6cf614df30a2fa36fdbb93a1984b2dedaa5dd13c7d6f77fc60d28383b36a51",
+  "method": "same-origin fetch() in the built-in browser, workbook read by the hand-written xlsx reader; lines copied out and rebuilt by _transcripts/decode_lines.py, hash required to match",
+  "pulled": "2026-11-06"
+ }
+}

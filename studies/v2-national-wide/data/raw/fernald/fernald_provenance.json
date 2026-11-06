@@ -1,0 +1,14 @@
+{
+ "FERNALD_quarterly_tfp__annual_colsA_L_M_N.csv": {
+  "url": "https://www.frbsf.org/wp-content/uploads/quarterly_tfp.xlsx (linked as 'Download latest dataset' from https://www.frbsf.org/research-and-insights/data-and-indicators/total-factor-productivity-tfp/)",
+  "file_sha256": "f037e488b536f1dd8b6e59ebbeeae129f2801dda9da761b268ec3173201fbcaa",
+  "file_bytes": 252789,
+  "file_last_modified": "Fri, 06 Nov 2026 18:00:48 GMT",
+  "vintage": "readme sheet: produced October 01, 2026 by John Fernald/Leela Khatri (QuarterlyTFP_2026.10.01); data subject to revision",
+  "citation": "John G. Fernald, 'A Quarterly, Utilization-Adjusted Series on Total Factor Productivity.' FRBSF Working Paper 2012-19 (updated March 2014).",
+  "extract": "sheet 'annual', columns A (date), L (dtfp, business-sector TFP), M (dutil, utilization), N (dtfp_util, utilization-adjusted TFP), every row 1947-2025; cell values exactly as stored in the sheet XML; percent change at annual rate (=100 x log difference of calendar-year averages, per readme)",
+  "extract_sha256": "3f4acdd2398b00d0ac69b2f2ef90a7a16d55523b3c2805283b352d6e09c863be",
+  "method": "same-origin fetch() in the built-in browser, workbook read by the hand-written xlsx reader (unzip + sheet XML); lines copied out and rebuilt by _transcripts/decode_lines.py, hash required to match",
+  "pulled": "2026-11-06"
+ }
+}

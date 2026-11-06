@@ -51,30 +51,34 @@ below matched.
 | `census/CENSUS_bds2023.csv` | Census Business Dynamics Statistics, 2023 release | bds/tables/time-series/2023/bds2023.csv (complete file, byte-identical) | A23 (`estabs_entry_rate`) | 2026-11-06 |
 | `eia/EIA_MER_T01.01__TEPRBUS_annual.csv` | EIA Monthly Energy Review, Table 1.1 | csv.php?tbl=T01.01, MSN `TEPRBUS` total primary energy production, annual (YYYY13) rows (see `eia/eia_provenance.json`) | A25 | 2026-11-06 |
 | `shiller/SHILLER_ie_data__JanDec_1899plus.csv` | Robert Shiller, `ie_data.xls` (now hosted at shillerdata.com, linked from his Yale data page) | sheet Data: January and December rows, P, D, CPI, real total return price (see `shiller/shiller_provenance.json`) | A20 | 2026-11-06 |
-| `voteview/HSall_members.csv` | Voteview | static/data/out/members/HSall_members.csv (complete file) | `voteview/HSall_parties.csv` | Voteview | static/data/out/parties/HSall_parties.csv (complete file) | C, E cross-check | 2026-11-06 |
+| `voteview/HSall_members.csv` | Voteview | static/data/out/members/HSall_members.csv (complete file) | C, E treatments | 2026-11-06 |
+| `voteview/HSall_parties.csv` | Voteview | static/data/out/parties/HSall_parties.csv (complete file) | C, E cross-check | 2026-11-06 |
 | `omb/OMB_hist01z2_fy2027.xlsx` | OMB Historical Tables, FY2027 Budget | Table 1.2, receipts/outlays/surplus as % of GDP (complete file; see `omb/omb_provenance.json`) | A16, A21 check | 2026-11-06 |
 | `omb/OMB_hist03z1_fy2027.xlsx` | OMB Historical Tables, FY2027 Budget | Table 3.1, outlays by function incl. national defense, $ and % GDP, 1940+ (complete file) | defense luck control | 2026-11-06 |
 | `omb/OMB_hist07z1_fy2027.xlsx` | OMB Historical Tables, FY2027 Budget | Table 7.1, federal debt at end of year, incl. held by the public % GDP, 1940-2025 (complete file) | A15 (1940+) | 2026-11-06 |
 | `wid/WID_data_US__sptinc992j_shweal992j_4groups.csv` | World Inequality Database (bulk download) | `sptinc992j` and `shweal992j`, p0p50 / p50p90 / p90p100 / p99p100, verbatim lines (see `wid/wid_provenance.json`) | B2, B4; A7 check | 2026-11-06 |
 | `wid/WID_data_US.csv.gz`, `wid/WID_metadata_US.csv.gz`, `wid/WID_README.md` | World Inequality Database (bulk download) | complete US data and metadata members of `wid_all_data.zip` (gzip-compressed), and its README | source for the extract above | 2026-11-06 |
+| `bls/BLS_pr.data.1.AllData__PRS85006092_093_annual.txt` | BLS Productivity and Costs (PR database) | download.bls.gov/pub/time.series/pr/pr.data.1.AllData: `PRS85006093` (nonfarm business output per hour, index 2017=100) and `PRS85006092` (% change), period Q05 = annual, verbatim lines (see `bls/bls_provenance.json`) | A24 (primary; FRED OPHNFB kept as check) | 2026-11-06 |
+| `bea/BEA_SAINC1__ALL_AREAS_1929_2025__regions_line3.csv` | BEA Regional Accounts, SAINC1 | apps.bea.gov/regional/zip/SAINC.zip, member SAINC1__ALL_AREAS_1929_2025.csv: per capita personal income (LineCode 3, current dollars), US and 8 BEA regions, verbatim lines (see `bea/bea_provenance.json`) | B12 | 2026-11-06 |
+| `fernald/FERNALD_quarterly_tfp__annual_colsA_L_M_N.csv` | John Fernald, FRBSF quarterly TFP (vintage 2026-10-01) | frbsf.org/wp-content/uploads/quarterly_tfp.xlsx, sheet annual: dtfp, dutil, dtfp_util, 1947-2025 (see `fernald/fernald_provenance.json`) | productivity luck control (check) | 2026-11-06 |
+| `bdf_ltp/BDF_LTP_BCLDatabase_v2.7__TFP_USA.csv` | Banque de France Long-Term Productivity Database v2.7 (Bergeaud, Cette, Lecat), Feb 2026 | longtermproductivity.com/download/BCLDatabase_online_v2.7.xlsx, sheet TFP, column USA, 1890-2024 (see `bdf_ltp/bdf_ltp_provenance.json`) | productivity luck control (primary) | 2026-11-06 |
+| `epi/EPI_hourly_wage_percentiles__national_real_wage_2025_p10_p50_p90.csv` | EPI State of Working America Data Library (CPS, EPI extracts; deflated with extended C-CPI-U) | data.epi.org API, indicator `hourly_wage_percentiles`, measure `real_wage_2025`, national, p10/p50/p90, 1973-2025 (see `epi/epi_provenance.json`) | B3 | 2026-11-06 |
 
 FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves incomplete periods blank (e.g. 2026).
 
 `_transcripts/` keeps the exact text copied out of the browser and the two scripts that rebuilt the files from it
-(`decode_fred.py`, `decode_owid.py`), so each rebuild can be re-run and re-checked.
+(`decode_fred.py`, `decode_owid.py`, `decode_bls.py`, and `decode_lines.py` for the BEA, Fernald, BdF and EPI extracts), so each rebuild can be re-run and re-checked.
 
 **Large and binary files** (Voteview, OMB, WID) were fetched the same way, then saved through the browser's own download (approved by the researcher
 2026-11-06) and copied here; the copy's SHA-256 equals the hash the browser computed on the fetched bytes.
 
 ## Still to pull (all sites approved by the researcher on 2026-11-06)
 
-| Item | Planned source |
-| --- | --- |
-| A19 homicide rate 1900+ | CDC/NCHS vital statistics (HSUS for early years); no long-run US series found on OWID |
-| B3 wage percentiles | EPI State of Working America Data Library |
-| B12 regional per-capita income | BEA regional accounts (SAINC1, 8 regions) |
-| C, E treatments | Voteview `HSall_members.csv` |
-| Luck controls | Banque de France LTP; Fernald (FRBSF); Maddison Project 2023; Romer–Romer shocks |
+| Item | Planned source | Status |
+| --- | --- | --- |
+| A19 homicide rate 1900+ | CDC/NCHS vital statistics (HIST290 tables 1900-98; HSUS for early years); 1999+ to be chosen | Needs a decision on sources and the pre-1933 death-registration area |
+| World growth luck control | Maddison Project Database 2023 (`mpd2023_web.xlsx`, dataverse.nl, doi:10.34894/INZBF2) | Located and hash-checked in the browser (SHA-1 matches Dataverse); its `Full data` sheet (131,145 rows) is too large to copy out as text, so it needs a browser download. Also needs a decision on how to build growth outside the US |
+| Monetary shocks luck control | Wieland & Yang (2020) updated Romer-Romer shocks, openICPSR project 135741 | openICPSR shows a Cloudflare human check and needs a login; the researcher has to download it |
 
 ## Decisions on data issues
 
@@ -89,6 +93,11 @@ BLS annual productivity, and the Wieland & Yang (2020) Romer-Romer extension.
 - **B10:** ratio computed from P-38 medians for all years; P-40 is the check (they differ only in 1969: 60.5 vs 58.9).
 
 ## Data notes (no results)
+
+- BLS annual productivity index vs FRED OPHNFB (annual average of the quarterly index): largest gap 0.24 index points over 1947-2025 (e.g. 2025: 118.434 vs 118.601).
+- BEA SAINC1 is in current dollars; B12 needs a deflator (the plan says "real" but names none). Far West excludes Alaska and Hawaii before 1950 (BEA footnote). In 1929 the Mideast had the highest per-capita income ($972) and the Southeast the lowest ($363); these fix B12's pre-named contrast.
+- BdF LTP TFP ends in 2024; Fernald's annual TFP runs to 2025.
+- EPI 2025 wage values look rounded (e.g. p90 = 65.375, p10 = 14.557999992370608, a single-precision 14.558); earlier years are not.
 
 - WID (pulled direct, 5 Nov 2026 release) has distinct top-1% income shares for 2022, 2023 and 2024 (0.2081, 0.2048, 0.2051),
   so the 20.73 repeated in OWID's copy was carried forward, as suspected. A7 can use WID's own values for those years.

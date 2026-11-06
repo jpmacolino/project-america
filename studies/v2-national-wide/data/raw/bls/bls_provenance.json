@@ -1,0 +1,17 @@
+{
+ "BLS_pr.data.1.AllData__PRS85006092_093_annual.txt": {
+  "url": "https://download.bls.gov/pub/time.series/pr/pr.data.1.AllData",
+  "table": "BLS Productivity and Costs (PR database), all series, all periods",
+  "series": {
+   "PRS85006093": "Labor productivity (output per hour), nonfarm business sector, index 2017=100, seasonally adjusted; period Q05 = annual average",
+   "PRS85006092": "Labor productivity, nonfarm business sector, % change; period Q05 = annual % change from previous year"
+  },
+  "file_sha256": "8b58755f43a8c63c5454e48ca10e9f2cae25d1f7acf6a35d89bddf0c7aeae08b",
+  "file_bytes": 3882812,
+  "file_last_modified": "Thu, 05 Nov 2026 13:30:00 GMT",
+  "extract": "header line plus every line for PRS85006092 and PRS85006093 with period Q05 (annual), verbatim including BLS padding and CRLF line ends. Footnote R = revised.",
+  "extract_sha256": "52bff8544f4c419891422ba37bb4a765912e1149dee3e6cb98e80329cfc59bf5",
+  "method": "same-origin fetch() in the built-in browser; values copied out and rebuilt by _transcripts/decode_bls.py, hash required to match",
+  "pulled": "2026-11-06"
+ }
+}

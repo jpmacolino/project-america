@@ -1,0 +1,16 @@
+{
+ "EPI_hourly_wage_percentiles__national_real_wage_2025_p10_p50_p90.csv": {
+  "url": "https://data.epi.org/api/indicator/data/list?indicatorId=hourly_wage_percentiles&dateInterval=year&measureId=real_wage_2025&geoIds=national&dimensionId=wage_percentile",
+  "page": "https://data.epi.org/wages/hourly_wage_percentiles/line/year/national/real_wage_2025/wage_percentile",
+  "indicator": "EPI State of Working America Data Library, 'Hourly wage percentiles - Real hourly wage (2025$)', United States, annual, 1973-2025",
+  "source_notes": "Sources: Current Population Survey, EPI extracts. Deflated using the extended Chained CPI-U (as shown on the page).",
+  "citation": "Economic Policy Institute, State of Working America Data Library, 'Hourly wage percentiles - Real hourly wage (2025$),' 2026.",
+  "response_sha256": "774c481705410963481e0a97f06301af7da53f3b70f79dbf095fc13de9c18c65",
+  "response_bytes": 59387,
+  "response_records": 477,
+  "extract": "the wage_p10, wage_p50 and wage_p90 records (159 of 477; 53 years x 3), sorted by year then percentile; value text copied verbatim from the JSON",
+  "extract_sha256": "7918d84ddb17101aa3bd0b4a08582d01f3cc577b17e69a4ba9ed13b7bcc940ac",
+  "method": "same-origin fetch() of the Data Library's own API in the built-in browser; extract copied out and rebuilt by _transcripts/decode_lines.py, hash required to match",
+  "pulled": "2026-11-06"
+ }
+}
