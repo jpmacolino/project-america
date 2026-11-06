@@ -55,13 +55,15 @@ below matched.
 | `omb/OMB_hist01z2_fy2027.xlsx` | OMB Historical Tables, FY2027 Budget | Table 1.2, receipts/outlays/surplus as % of GDP (complete file; see `omb/omb_provenance.json`) | A16, A21 check | 2026-11-06 |
 | `omb/OMB_hist03z1_fy2027.xlsx` | OMB Historical Tables, FY2027 Budget | Table 3.1, outlays by function incl. national defense, $ and % GDP, 1940+ (complete file) | defense luck control | 2026-11-06 |
 | `omb/OMB_hist07z1_fy2027.xlsx` | OMB Historical Tables, FY2027 Budget | Table 7.1, federal debt at end of year, incl. held by the public % GDP, 1940-2025 (complete file) | A15 (1940+) | 2026-11-06 |
+| `wid/WID_data_US__sptinc992j_shweal992j_4groups.csv` | World Inequality Database (bulk download) | `sptinc992j` and `shweal992j`, p0p50 / p50p90 / p90p100 / p99p100, verbatim lines (see `wid/wid_provenance.json`) | B2, B4; A7 check | 2026-11-06 |
+| `wid/WID_data_US.csv.gz`, `wid/WID_metadata_US.csv.gz`, `wid/WID_README.md` | World Inequality Database (bulk download) | complete US data and metadata members of `wid_all_data.zip` (gzip-compressed), and its README | source for the extract above | 2026-11-06 |
 
 FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves incomplete periods blank (e.g. 2026).
 
 `_transcripts/` keeps the exact text copied out of the browser and the two scripts that rebuilt the files from it
 (`decode_fred.py`, `decode_owid.py`), so each rebuild can be re-run and re-checked.
 
-**Large and binary files** (Voteview, OMB) were fetched the same way, then saved through the browser's own download (approved by the researcher
+**Large and binary files** (Voteview, OMB, WID) were fetched the same way, then saved through the browser's own download (approved by the researcher
 2026-11-06) and copied here; the copy's SHA-256 equals the hash the browser computed on the fetched bytes.
 
 ## Still to pull (all sites approved by the researcher on 2026-11-06)
@@ -69,7 +71,6 @@ FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves inc
 | Item | Planned source |
 | --- | --- |
 | A19 homicide rate 1900+ | CDC/NCHS vital statistics (HSUS for early years); no long-run US series found on OWID |
-| B2, B4 income and wealth shares | WID (`sptinc`, `shweal`, p0p50 / p50p90 / p90p100 / p99p100) |
 | B3 wage percentiles | EPI State of Working America Data Library |
 | B12 regional per-capita income | BEA regional accounts (SAINC1, 8 regions) |
 | C, E treatments | Voteview `HSall_members.csv` |
@@ -86,3 +87,10 @@ BLS annual productivity, and the Wieland & Yang (2020) Romer-Romer extension.
 
 - **A18:** CPS changes 1987-2008 (within consistent pieces), ACS changes 2009-2025; changes touching 2020 missing.
 - **B10:** ratio computed from P-38 medians for all years; P-40 is the check (they differ only in 1969: 60.5 vs 58.9).
+
+## Data notes (no results)
+
+- WID (pulled direct, 5 Nov 2026 release) has distinct top-1% income shares for 2022, 2023 and 2024 (0.2081, 0.2048, 0.2051),
+  so the 20.73 repeated in OWID's copy was carried forward, as suspected. A7 can use WID's own values for those years.
+- WID's `data_quality` column is 0 for the latest wealth-share years (e.g. 2024); worth a look before use.
+

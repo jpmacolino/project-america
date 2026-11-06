@@ -1,0 +1,42 @@
+{
+ "WID_data_US.csv.gz": {
+  "url": "https://wid.world/bulk_download/wid_all_data.zip",
+  "member": "WID_data_US.csv",
+  "member_crc32": 2982102015,
+  "member_bytes": 53383748,
+  "member_sha256": "5daf54acd9fe5e949c453e2f85ce089c8754b436ba9dff7dd6a7397022cb4cce",
+  "table": "World Inequality Database, all US national series",
+  "extract": "complete member, stored gzip-compressed (gzip -n -9) to keep the repo small; zcat output has member_sha256. Read from the WID bulk zip (902,483,784 bytes, Last-Modified Thu, 05 Nov 2026 08:43:05 GMT, ETag \"35cacf48-65f837bff714e\") with HTTP range requests for the central directory and this one member, inflated in the browser; CRC-32 and size equal to the zip directory's; SHA-256 computed in the browser; saved via browser download and the copy's hash matched.",
+  "gz_sha256": "bb41f5bca5e1fe92c6840d56be6f9c5f9c9cf8384ca291dc307ba901c6b0c716",
+  "pulled": "2026-11-06"
+ },
+ "WID_metadata_US.csv.gz": {
+  "url": "https://wid.world/bulk_download/wid_all_data.zip",
+  "member": "WID_metadata_US.csv",
+  "member_crc32": 1537935122,
+  "member_bytes": 3847814,
+  "member_sha256": "844ceefef9ea62029d99c4d71fe3a69350741b32ba4d7c9a0cfa731977c19606",
+  "table": "WID variable metadata for US series (sources, methods)",
+  "extract": "complete member, gzip -n -9. Read from the WID bulk zip (902,483,784 bytes, Last-Modified Thu, 05 Nov 2026 08:43:05 GMT, ETag \"35cacf48-65f837bff714e\") with HTTP range requests for the central directory and this one member, inflated in the browser; CRC-32 and size equal to the zip directory's; SHA-256 computed in the browser; saved via browser download and the copy's hash matched.",
+  "gz_sha256": "f812f03477e037e00fd5f9cfccb35b813adfca1d7eeab02c65e6a483d517871e",
+  "pulled": "2026-11-06"
+ },
+ "WID_README.md": {
+  "url": "https://wid.world/bulk_download/wid_all_data.zip",
+  "member": "README.md",
+  "member_crc32": 2349443961,
+  "member_bytes": 10339,
+  "member_sha256": "300d7ba84a932c4e966b184797d8088943613d9cccd846570730cf3f09064780",
+  "table": "WID bulk download README (file format, variable codes)",
+  "extract": "complete member. Read from the WID bulk zip (902,483,784 bytes, Last-Modified Thu, 05 Nov 2026 08:43:05 GMT, ETag \"35cacf48-65f837bff714e\") with HTTP range requests for the central directory and this one member, inflated in the browser; CRC-32 and size equal to the zip directory's; SHA-256 computed in the browser; saved via browser download and the copy's hash matched.",
+  "pulled": "2026-11-06"
+ },
+ "WID_data_US__sptinc992j_shweal992j_4groups.csv": {
+  "url": "https://wid.world/bulk_download/wid_all_data.zip",
+  "member": "WID_data_US.csv",
+  "table": "Pre-tax national income share (sptinc992j) and net personal wealth share (shweal992j), adults 20+, equal-split, US",
+  "extract": "header plus every line of WID_data_US.csv with variable sptinc992j or shweal992j and percentile p0p50, p50p90, p90p100 or p99p100; lines verbatim (grep).",
+  "extract_sha256": "39b490d994170a51d86c5bdbd04811a7d5d2ce1dd64a80dc1a5cac02bdcbbf7a",
+  "pulled": "2026-11-06"
+ }
+}
