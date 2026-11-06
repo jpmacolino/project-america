@@ -5,6 +5,8 @@ the lives of the American people?
 
 ## Rules of the road
 
+Claude sessions follow `CLAUDE.md`.
+
 1. **Pre-register before looking.** Each new study gets a `PREREGISTRATION.md` (hypotheses,
    outcomes, groups, tests, thresholds, expected direction per outcome) committed and tagged
    *before* any new data is pulled or analysed. The git timestamp is the proof.
