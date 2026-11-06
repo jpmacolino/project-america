@@ -34,5 +34,86 @@
   "extract": "'All Families' block; column A (year label), D (median income, 2025 dollars). Spot check: 1953-2025 values equal FRED MEFAINUSA672N",
   "extract_sha256": "eb6f052aeca0af0038b40933e93cb3b43c1ff9f8f808115b6fde365080656483",
   "pulled": "2026-11-06"
+ },
+ "CENSUS_h05__colsA_D.csv": {
+  "url": "https://www2.census.gov/programs-surveys/cps/tables/time-series/historical-income-households/h05.xlsx",
+  "table": "Table H-5. Median and Mean Household Income by Race and Hispanic Origin of Householder: 1967 to 2025",
+  "file_sha256": "aa2d2fda0e75ce1fae39ce2e95b7890279c3301b2ae602ef064695a9b3b2624e",
+  "file_bytes": 23093,
+  "extract": "column A (year label, footnote numbers kept) and column D (median income, 2025 dollars); race blocks All Races, White Alone, White, White Alone Not Hispanic, White Not Hispanic, Black Alone or in Combination, Black Alone, Black, Hispanic (any race); block label rows kept as stored (with footnote numbers); 'N' = not available as published",
+  "extract_sha256": "908eaff90972a2dae430de02ed80dbe1f70f11fce3e4ab280f697bc289f9c153",
+  "pulled": "2026-11-06"
+ },
+ "CENSUS_p40__colsA_B.csv": {
+  "url": "https://www2.census.gov/programs-surveys/cps/tables/time-series/historical-income-people/p40.xlsx",
+  "table": "Table P-40. Women's Earnings as a Percentage of Men's Earnings by Race and Hispanic Origin: 1960 to 2025",
+  "file_sha256": "bb2099376c2d7a51bc29406c7bc829259b9ad88ed4a295216604b7e43781a5d4",
+  "file_bytes": 11443,
+  "extract": "column A (year label) and column B (All races, women's median earnings as % of men's, full-time year-round workers); first line is the column B header",
+  "extract_sha256": "c6bf8e2113e038d7bc321e4de0b216eea8f68a4e2536ad16b1a89f411da4227c",
+  "pulled": "2026-11-06"
+ },
+ "CENSUS_p38ar__colsA_C_D_F_G.csv": {
+  "url": "https://www2.census.gov/programs-surveys/cps/tables/time-series/historical-income-people/p38ar.xlsx",
+  "table": "Table P-38. Median Personal Earnings of All Full-Time, Year-Round Workers by Sex: 1960 to 2025",
+  "file_sha256": "a53f7702965beb53c19fc6550d8f8cdac52e6b95603892bdd59d7b3c2c8ae41d",
+  "file_bytes": 10443,
+  "extract": "column A (year label), C/D (male median earnings, current / 2025 dollars), F/G (female median earnings, current / 2025 dollars); first line is a descriptive header for the four value columns. Check against P-40: ratio F/C matches P-40 to rounding in every year except 1969 (P-38 gives 60.5, P-40 gives 58.9)",
+  "extract_sha256": "965e86c60325a73a85671835dadf1eab740ff025617e6eae69e744c230ad5940",
+  "pulled": "2026-11-06"
+ },
+ "CENSUS_hst_attain02__25plus_colsA_B.csv": {
+  "url": "https://www2.census.gov/programs-surveys/demo/tables/educational-attainment/time-series/cps-historical-time-series/hst_attain02.xlsx",
+  "table": "Table A-2. Percent of People 25 Years and Over Who Have Completed High School or College, by Race, Hispanic Origin and Sex: Selected Years 1940 to 2025",
+  "file_sha256": "e540661d5eb7e7a85f03d7d3c4acf92c831b9c05b4b9081a5301293699847f16",
+  "file_bytes": 55630,
+  "extract": "blocks '25 Years and Over, Completed 4 Years of High School or more' and '... of College or more'; column A (year) and B (All people, total). Matches the v1 copy in data/raw/browser_series.txt for overlapping years",
+  "extract_sha256": "57ae3cbd0008066dadf899fa12706ddf628494803dfb03ccd9344e55293d5c7c",
+  "pulled": "2026-11-06"
+ },
+ "CENSUS_orghihistt1__lines70-133.txt": {
+  "url": "https://www2.census.gov/programs-surveys/demo/tables/health-insurance/time-series/original/orghihistt1.txt",
+  "table": "Table HI-1 (original CPS estimates). Health Insurance Coverage Status and Type of Coverage by Sex, Race and Hispanic Origin: 1987 to 2005",
+  "file_sha256": "87011b3885397f712d2d9c0e2140ea9b9d9af9fa49579d75a60d558e85da819d",
+  "file_bytes": 214866,
+  "extract": "lines 70-133 of the text file verbatim (CR removed from CRLF line ends): ALL RACES, BOTH SEXES, government coverage and 'Not covered' columns, numbers and percents",
+  "extract_sha256": "8a957815cede4a281dc4f5cb2ead1980bbfc076d571d799ce69b984795715167",
+  "pulled": "2026-11-06"
+ },
+ "CENSUS_hihistt1b__AllRacesBothSexes_pct_cols0_10.csv": {
+  "url": "https://www2.census.gov/programs-surveys/demo/tables/health-insurance/time-series/hib/hihistt1b.xls",
+  "table": "Table HIB-1. Health Insurance Coverage Status and Type of Coverage by Sex, Race and Hispanic Origin: 1999 to 2012",
+  "file_sha256": "65fd0833918d52766c8542c9a8207d2605d3220268d23dea096e43829ac8c5fd",
+  "file_bytes": 137728,
+  "extract": "legacy .xls (BIFF8) read in the browser by a hand-written OLE/BIFF reader; ALL RACES BOTH SEXES, PERCENTS block, column 0 (year label as stored, incl. trailing space in '2009 ') and column 10 (Not Covered, %); numbers written in JavaScript shortest round-trip form; first line is a descriptive header",
+  "extract_sha256": "50cd56a07a0d9d56464f99ce6420d9b3930c5efa66bedd62f5264a205387f4ba",
+  "pulled": "2026-11-06"
+ },
+ "CENSUS_hhi01__AllRacesBothSexes_colsA_B_V_W.csv": {
+  "url": "https://www2.census.gov/programs-surveys/demo/tables/health-insurance/time-series/hic/hhi01.xlsx",
+  "table": "Table HHI-01. Health Insurance Coverage Status and Type of Coverage--All Persons by Sex, Race and Hispanic Origin: 2017 to 2025",
+  "file_sha256": "a5265d770e796b2aab2dd0f90045b14f59fbe65e685a2b78dc2654bffcc65222",
+  "file_bytes": 68862,
+  "extract": "All Races -- Both Sexes block, Number and Percent sub-blocks; columns A (year label), B (total), V (uninsured), W (margin of error); first line is a descriptive header",
+  "extract_sha256": "6bc4a1afd612ec9ce00c7830d5d5077f5d9592392275dc8240f6b7c024ae8a4a",
+  "pulled": "2026-11-06"
+ },
+ "CENSUS_hic04_acs__US_Uninsured.csv": {
+  "url": "https://www2.census.gov/programs-surveys/demo/tables/health-insurance/time-series/acs/hic04_acs.xlsx",
+  "table": "Table HIC-4_ACS. Health Insurance Coverage Status and Type of Coverage by State--All Persons: 2008 to 2025 (American Community Survey)",
+  "file_sha256": "9d6d101122aad168fbd8b08da8f53d2dc04eed2074fea2b5c54d349ab3a75fa3",
+  "file_bytes": 188045,
+  "extract": "row 'United States / .Uninsured' across all years: year label from row 5, estimate (thousands), MOE, percent, MOE; 2020 not published (N); first line is a descriptive header",
+  "extract_sha256": "04cefcff67535c37e92b05ea786267643e3ec7d725b70cb43738d33be67a2c92",
+  "pulled": "2026-11-06"
+ },
+ "CENSUS_bds2023.csv": {
+  "url": "https://www2.census.gov/programs-surveys/bds/tables/time-series/2023/bds2023.csv",
+  "table": "Business Dynamics Statistics, 2023 release, economy-wide, 1978-2023",
+  "file_sha256": "1278adb3a89d6d16950f8bdd0097de2dd9545934bd3f969bb86fa6057b430978",
+  "file_bytes": 9038,
+  "extract": "complete file, byte-identical to the source (SHA-256 equal to file_sha256)",
+  "extract_sha256": "1278adb3a89d6d16950f8bdd0097de2dd9545934bd3f969bb86fa6057b430978",
+  "pulled": "2026-11-06"
  }
 }

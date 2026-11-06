@@ -4,7 +4,8 @@ Pull began 2026-11-06 (after tag `v2-prereg`, which is on GitHub). Every file in
 its source URL, series ID and pull date. Files are stored exactly as the source served them, or, where a source
 serves a large multi-country file or an Excel workbook, as a verbatim row/column extract with the full file's SHA-256
 recorded (`owid/owid_provenance.json`, `census/census_provenance.json`). Census workbooks are read in the browser by a
-small hand-written reader (unzip + sheet XML), so cell values are exactly as stored in the workbook. `checksums.sha256` covers every file.
+small hand-written reader (unzip + sheet XML), so cell values are exactly as stored in the workbook. The one legacy `.xls` (HIB-1)
+is read by a hand-written OLE/BIFF8 reader; its numbers are written in JavaScript's shortest round-trip form. `checksums.sha256` covers every file.
 
 **How browser pulls were checked.** FRED, OWID and Census block scripted downloads, so (as in v1) they were
 fetched with same-origin `fetch()` in the built-in browser. The browser computed a SHA-256 of the exact text it
@@ -39,6 +40,15 @@ below matched.
 | `census/CENSUS_hstpov3__colsA_E_M_Q.csv` | Census CPS ASEC Historical Poverty Table 3 | hstpov3.xlsx, All Races, under 18 / 18-64 / 65+ | B8 | 2026-11-06 |
 | `census/CENSUS_f01ar__2025dollars_colsA_C-G.csv` | Census Table F-1 | f01ar.xlsx, 2025-dollar block: 20th/40th/60th/80th/95th percentile limits | B1 | 2026-11-06 |
 | `census/CENSUS_f07ar__AllFamilies_colsA_D.csv` | Census Table F-7 | f07ar.xlsx, all families, median income, 2025 dollars (first-listed row in duplicate years matches FRED for all 72 overlapping years) | A17 | 2026-11-06 |
+| `census/CENSUS_h05__colsA_D.csv` | Census Table H-5 | h05.xlsx, median household income, 2025 dollars, race blocks (see `census/census_provenance.json`) | B7 | 2026-11-06 |
+| `census/CENSUS_p40__colsA_B.csv` | Census Table P-40 | p40.xlsx, all races, women's median earnings as % of men's (full-time, year-round) | B10 | 2026-11-06 |
+| `census/CENSUS_p38ar__colsA_C_D_F_G.csv` | Census Table P-38 | p38ar.xlsx, median earnings of men and women (full-time, year-round), current and 2025 dollars | B10 check | 2026-11-06 |
+| `census/CENSUS_hst_attain02__25plus_colsA_B.csv` | Census CPS Table A-2 | hst_attain02.xlsx, % of people 25+ with 4 yrs high school or more / 4 yrs college or more | A13, A14 | 2026-11-06 |
+| `census/CENSUS_orghihistt1__lines70-133.txt` | Census Table HI-1 (original CPS estimates, 1987-2005) | time-series/original/orghihistt1.txt, all races both sexes, % not covered (verbatim lines) | A18 | 2026-11-06 |
+| `census/CENSUS_hihistt1b__AllRacesBothSexes_pct_cols0_10.csv` | Census Table HIB-1 (CPS, 1999-2012) | time-series/hib/hihistt1b.xls, all races both sexes, % not covered | A18 | 2026-11-06 |
+| `census/CENSUS_hhi01__AllRacesBothSexes_colsA_B_V_W.csv` | Census Table HHI-01 (CPS, 2017-2025) | time-series/hic/hhi01.xlsx, all persons, uninsured number and % | A18 | 2026-11-06 |
+| `census/CENSUS_hic04_acs__US_Uninsured.csv` | Census Table HIC-4_ACS (ACS, 2008-2025) | time-series/acs/hic04_acs.xlsx, United States, uninsured number and % | A18 | 2026-11-06 |
+| `census/CENSUS_bds2023.csv` | Census Business Dynamics Statistics, 2023 release | bds/tables/time-series/2023/bds2023.csv (complete file, byte-identical) | A23 (`estabs_entry_rate`) | 2026-11-06 |
 
 FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves incomplete periods blank (e.g. 2026).
 
@@ -49,11 +59,6 @@ FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves inc
 
 | Item | Planned source |
 | --- | --- |
-| A13, A14 attainment | Census CPS Table A-2 (`hst_attain02.xlsx`) |
-| B7 household income by race | Census Table H-5 (`.../historical-income-households/h05.xlsx`) |
-| B10 women-to-men earnings ratio | Census Table P-38 / P-40 (`.../historical-income-people/p38.xlsx`, `p40.xlsx`) |
-| A18 uninsured rate | Census historical health insurance tables (CPS 1987+, ACS) |
-| A23 establishment entry rate | Census Business Dynamics Statistics, national file |
 | A19 homicide rate 1900+ | CDC/NCHS vital statistics (HSUS for early years); no long-run US series found on OWID |
 | A20 real S&P total return | Shiller long-run data (`ie_data.xls`) |
 | A25 primary energy production | EIA Monthly Energy Review Table 1.1 |
@@ -70,3 +75,12 @@ Six places where the data and the frozen plan did not line up exactly were put t
 2026-11-06 and decided before any analysis. They are logged in `../../DEVIATIONS.md`: A15 debt definition,
 carried-forward values treated as missing, quarterly unemployment from 1948Q1, Hispanic unemployment from 1974,
 BLS annual productivity, and the Wieland & Yang (2020) Romer-Romer extension.
+
+## Open data questions (put to the researcher; no analysis run)
+
+- **A18 uninsured rate: no single consistent series from 1987.** Census publishes CPS estimates in pieces with method
+  breaks: original 1987-2005 (with overlap years 1999, 2004), HIB-1 1999-2012, and HHI-01 2017-2025. There is no CPS
+  historical table for 2013-2016 (the 2014 questionnaire redesign). The ACS gives a consistent national series for
+  2008-2025 (2020 not published). How to join them is to be decided and logged in `DEVIATIONS.md` before use.
+- **B10, 1969:** P-40 shows 58.9; the ratio of P-38's medians is 60.5. All other years agree to rounding.
+
