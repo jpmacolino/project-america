@@ -62,21 +62,9 @@ FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves inc
 | C, E treatments | Voteview `HSall_members.csv` |
 | Luck controls | Banque de France LTP; Fernald (FRBSF); Maddison Project 2023; Romer–Romer shocks |
 
-## Open questions for the researcher (no results seen; nothing decided yet)
+## Decisions on data issues
 
-These are places where the frozen plan and the data do not line up exactly. None changes a test. Each will go in
-`DEVIATIONS.md` once the researcher decides.
-
-1. **A15 debt definition.** The plan says "federal debt *held by the public*", but the named source
-   (MeasuringWorth via Ecdat) is *total* public debt outstanding (Treasury). OMB Table 7.1 gives held-by-public
-   from 1939 only. Options: total debt 1900+ (as sourced), or held-by-public 1939+ spliced to total debt before
-   1939 (when intragovernmental holdings were small).
-2. **A7 top-1% share, last years.** OWID's WID series shows 20.73 for 2022, 2023 and 2024: almost certainly
-   carried forward, not observed. Proposal: treat repeated end-of-series values as missing (check against WID directly).
-3. **F quarterly unemployment starts 1948Q1**, not 1947Q1 (BLS monthly series begins January 1948).
-4. **B5 Hispanic unemployment**: FRED's annual average starts 1974 because the monthly series begins March 1973.
-   BLS publishes a 1973 annual average; proposal: drop 1973 (partial year).
-5. **A24 productivity**: FRED gives the annual average of the quarterly index, which can differ slightly from BLS's
-   published annual index. Proposal: pull the BLS annual series directly if reachable, else use FRED and note it.
-6. **Romer–Romer shocks** "as extended in later research": the plan does not name the extension. One must be chosen
-   (e.g. Wieland & Yang 2020, through 2007) before any analysis.
+Six places where the data and the frozen plan did not line up exactly were put to the researcher on
+2026-11-06 and decided before any analysis. They are logged in `../../DEVIATIONS.md`: A15 debt definition,
+carried-forward values treated as missing, quarterly unemployment from 1948Q1, Hispanic unemployment from 1974,
+BLS annual productivity, and the Wieland & Yang (2020) Romer-Romer extension.
