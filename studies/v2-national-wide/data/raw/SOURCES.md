@@ -63,13 +63,15 @@ below matched.
 | `fernald/FERNALD_quarterly_tfp__annual_colsA_L_M_N.csv` | John Fernald, FRBSF quarterly TFP (vintage 2026-10-01) | frbsf.org/wp-content/uploads/quarterly_tfp.xlsx, sheet annual: dtfp, dutil, dtfp_util, 1947-2025 (see `fernald/fernald_provenance.json`) | productivity luck control (check) | 2026-11-06 |
 | `bdf_ltp/BDF_LTP_BCLDatabase_v2.7__TFP_USA.csv` | Banque de France Long-Term Productivity Database v2.7 (Bergeaud, Cette, Lecat), Feb 2026 | longtermproductivity.com/download/BCLDatabase_online_v2.7.xlsx, sheet TFP, column USA, 1890-2024 (see `bdf_ltp/bdf_ltp_provenance.json`) | productivity luck control (primary) | 2026-11-06 |
 | `epi/EPI_hourly_wage_percentiles__national_real_wage_2025_p10_p50_p90.csv` | EPI State of Working America Data Library (CPS, EPI extracts; deflated with extended C-CPI-U) | data.epi.org API, indicator `hourly_wage_percentiles`, measure `real_wage_2025`, national, p10/p50/p90, 1973-2025 (see `epi/epi_provenance.json`) | B3 | 2026-11-06 |
+| `maddison/MADDISON_mpd2023_web.xlsx` | Maddison Project Database 2023 (Bolt & van Zanden 2024), Dataverse doi:10.34894/INZBF2 | dataverse.nl/api/access/datafile/421302 (complete file; SHA-1 equals Dataverse's; see `maddison/maddison_provenance.json`) | world-growth luck control (sheet `Full data`) | 2026-11-06 |
+| `wieland_yang/RR_monetary_shock_{annual,quarterly,monthly}.txt` | Wieland & Yang updated Romer-Romer shocks, GitHub `johanneswieland/RomerShocks` at commit b0092c4 (linked from johanneswieland.github.io; stable copy on openICPSR 135741) | complete files, plus Wieland's `RR_monetary_shock_update.do` and readme (`WY_readme.md`); see `wieland_yang/wieland_yang_provenance.json` | monetary-shock luck control, 1969-2007 | 2026-11-06 |
 
 FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves incomplete periods blank (e.g. 2026).
 
 `_transcripts/` keeps the exact text copied out of the browser and the two scripts that rebuilt the files from it
 (`decode_fred.py`, `decode_owid.py`, `decode_bls.py`, and `decode_lines.py` for the BEA, Fernald, BdF and EPI extracts), so each rebuild can be re-run and re-checked.
 
-**Large and binary files** (Voteview, OMB, WID) were fetched the same way, then saved through the browser's own download (approved by the researcher
+**Large and binary files** (Voteview, OMB, WID, Maddison) were fetched the same way, then saved through the browser's own download (approved by the researcher
 2026-11-06) and copied here; the copy's SHA-256 equals the hash the browser computed on the fetched bytes.
 
 ## Still to pull (all sites approved by the researcher on 2026-11-06)
@@ -77,8 +79,7 @@ FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves inc
 | Item | Planned source | Status |
 | --- | --- | --- |
 | A19 homicide rate 1900+ | CDC/NCHS vital statistics (HIST290 tables 1900-98; HSUS for early years); 1999+ to be chosen | Needs a decision on sources and the pre-1933 death-registration area |
-| World growth luck control | Maddison Project Database 2023 (`mpd2023_web.xlsx`, dataverse.nl, doi:10.34894/INZBF2) | Located and hash-checked in the browser (SHA-1 matches Dataverse); its `Full data` sheet (131,145 rows) is too large to copy out as text, so it needs a browser download. Also needs a decision on how to build growth outside the US |
-| Monetary shocks luck control | Wieland & Yang (2020) updated Romer-Romer shocks, openICPSR project 135741 | openICPSR shows a Cloudflare human check and needs a login; the researcher has to download it |
+| (All other planned sources are pulled.) | | |
 
 ## Decisions on data issues
 
@@ -91,6 +92,11 @@ BLS annual productivity, and the Wieland & Yang (2020) Romer-Romer extension.
 
 - **A18:** CPS changes 1987-2008 (within consistent pieces), ACS changes 2009-2025; changes touching 2020 missing.
 - **B10:** ratio computed from P-38 medians for all years; P-40 is the check (they differ only in 1969: 60.5 vs 58.9).
+
+## Decided during part 9 (logged in `../../DEVIATIONS.md`, 2026-11-06)
+
+- **World growth (Maddison):** chain-linked growth of aggregate GDP per capita over non-US countries present in both years.
+- **B12 deflator:** the A3 CPI (Ecdat/MeasuringWorth) for all regions; 2024-25 from FRED CPIAUCSL annual average.
 
 ## Data notes (no results)
 

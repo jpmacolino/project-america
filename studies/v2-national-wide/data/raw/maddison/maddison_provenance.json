@@ -1,0 +1,22 @@
+{
+ "MADDISON_mpd2023_web.xlsx": {
+  "url": "https://dataverse.nl/api/access/datafile/421302 (Excel link on https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023)",
+  "dataset": "Maddison Project Database 2023, Dataverse doi:10.34894/INZBF2, version 1.0, released 2024-04-26",
+  "file_sha256": "ecc5916ca12789b983fc4be437f8a354bbf4291323605324ac3e0aea4c57cbb6",
+  "file_sha1": "1480521f602fbd5df64e108867ac971caa00ed1a (equals the SHA-1 Dataverse publishes for this file)",
+  "file_bytes": 4903804,
+  "sheets": [
+   "Notes",
+   "Sources",
+   "GDPpc",
+   "Population",
+   "Full data",
+   "Regional data",
+   "Maddison original sources"
+  ],
+  "used": "sheet 'Full data' (countrycode, country, region, year, gdppc, pop); 'Regional data' has only benchmark years before 2015, so it cannot give annual world growth",
+  "citation": "Bolt, Jutta and Jan Luiten van Zanden (2024), 'Maddison style estimates of the evolution of the world economy: A new 2023 update', Journal of Economic Surveys, 1-41. DOI: 10.1111/joes.12618. CC BY 4.0.",
+  "method": "same-origin fetch() in the built-in browser (hash computed on the fetched bytes), saved by browser download (approved by the researcher 2026-11-06), copied into the repo; copy's SHA-256 equals the browser's",
+  "pulled": "2026-11-06"
+ }
+}

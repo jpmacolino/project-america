@@ -1,0 +1,35 @@
+{
+ "_source": {
+  "repo": "https://github.com/johanneswieland/RomerShocks (linked as 'Updated Romer-Romer Monetary shocks' from https://johanneswieland.github.io; the README says a stable version is on openICPSR, project 135741)",
+  "commit": "b0092c407a74fe0a8f81fba276cda9e2e7e704d5 (2024-09-05, 'Added ICPSR link')",
+  "raw_url_pattern": "https://raw.githubusercontent.com/johanneswieland/RomerShocks/b0092c407a74fe0a8f81fba276cda9e2e7e704d5/<file>",
+  "citation": "Wieland, J. F. and Yang, M.-J. (2020), 'Financial Dampening', Journal of Money, Credit and Banking; with Romer, C. D. and Romer, D. H. (2004), 'A New Measure of Monetary Shocks: Derivation and Implications', AER.",
+  "variables": "date; resid = original Romer-Romer (2004) shocks (ends 1996); resid_romer = shocks from the original R&R regression (estimated on the R&R sample) applied to 1969-2007; resid_full = shocks from the R&R regression re-estimated on 1969-2007",
+  "aggregation": "per RR_monetary_shock_update.do: meeting shocks summed to months, quarters and years (collapse (sum)); months with no meeting = 0",
+  "coverage": "annual 1969-2007 (confirms the A-row deviation entry)",
+  "method": "fetched with curl in the cloud sandbox from raw.githubusercontent.com at the pinned commit; SHA-256 independently re-computed in the built-in browser on the same URLs (all three .txt match); written into the repo byte-for-byte",
+  "pulled": "2026-11-06"
+ },
+ "RR_monetary_shock_annual.txt": {
+  "sha256": "57c7c2765b179da7711069a085f065bc9138cb0e07d6ab7823ac2a222a489962",
+  "bytes": 2121
+ },
+ "RR_monetary_shock_quarterly.txt": {
+  "sha256": "b23d579f84dfa247858e36416148f159007c95acc1d3f6ae44d44153b0be577d",
+  "bytes": 8578
+ },
+ "RR_monetary_shock_monthly.txt": {
+  "sha256": "b902b6470012747e97c85a3e21bcd5ce617135d2dd7eb548afaa0d721558831d",
+  "bytes": 20821
+ },
+ "RR_monetary_shock_update.do": {
+  "sha256": "2c4e182e67954b94e69642e26d65e5673ed23bc6f2cf363bb19d6f0e1690abf3",
+  "bytes": 25977,
+  "note": "Wieland's Stata code that builds the three series"
+ },
+ "WY_readme.md": {
+  "sha256": "39fca13d1d720639718458514bb66280654ecca19f021bc7b77a408a5c33e667",
+  "bytes": 2524,
+  "note": "the repo's readme.md, renamed"
+ }
+}
