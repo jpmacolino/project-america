@@ -1,0 +1,20 @@
+{
+ "HSall_members.csv": {
+  "url": "https://voteview.com/static/data/out/members/HSall_members.csv",
+  "table": "Voteview member ideology file, all Congresses, House, Senate and President (DW-NOMINATE dimensions 1 and 2, Nokken-Poole)",
+  "file_sha256": "d78f55120b59534e99f30541469325059f953b210f0ddb6ebb54601c9303c0f6",
+  "file_bytes": 6201422,
+  "server_last_modified": "Fri, 23 Oct 2026 06:14:26 GMT",
+  "extract": "complete file. Fetched same-origin in the built-in browser (SHA-256 computed there), saved through the browser's download to Downloads, copied here; SHA-256 equal to the browser's.",
+  "pulled": "2026-11-06"
+ },
+ "HSall_parties.csv": {
+  "url": "https://voteview.com/static/data/out/parties/HSall_parties.csv",
+  "table": "Voteview party summary file: members and median/mean DW-NOMINATE by Congress, chamber and party",
+  "file_sha256": "2e87975b147d75a4f5ee5490e939d39f535840cd6734630b3e7912e35f8e8ae4",
+  "file_bytes": 59787,
+  "server_last_modified": "Fri, 23 Oct 2026 06:14:15 GMT",
+  "extract": "complete file; same route and check as HSall_members.csv. Used as a cross-check on seat counts and party medians.",
+  "pulled": "2026-11-06"
+ }
+}

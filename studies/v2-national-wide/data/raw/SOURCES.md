@@ -49,19 +49,23 @@ below matched.
 | `census/CENSUS_hhi01__AllRacesBothSexes_colsA_B_V_W.csv` | Census Table HHI-01 (CPS, 2017-2025) | time-series/hic/hhi01.xlsx, all persons, uninsured number and % | A18 | 2026-11-06 |
 | `census/CENSUS_hic04_acs__US_Uninsured.csv` | Census Table HIC-4_ACS (ACS, 2008-2025) | time-series/acs/hic04_acs.xlsx, United States, uninsured number and % | A18 | 2026-11-06 |
 | `census/CENSUS_bds2023.csv` | Census Business Dynamics Statistics, 2023 release | bds/tables/time-series/2023/bds2023.csv (complete file, byte-identical) | A23 (`estabs_entry_rate`) | 2026-11-06 |
+| `eia/EIA_MER_T01.01__TEPRBUS_annual.csv` | EIA Monthly Energy Review, Table 1.1 | csv.php?tbl=T01.01, MSN `TEPRBUS` total primary energy production, annual (YYYY13) rows (see `eia/eia_provenance.json`) | A25 | 2026-11-06 |
+| `shiller/SHILLER_ie_data__JanDec_1899plus.csv` | Robert Shiller, `ie_data.xls` (now hosted at shillerdata.com, linked from his Yale data page) | sheet Data: January and December rows, P, D, CPI, real total return price (see `shiller/shiller_provenance.json`) | A20 | 2026-11-06 |
+| `voteview/HSall_members.csv` | Voteview | static/data/out/members/HSall_members.csv (complete file) | `voteview/HSall_parties.csv` | Voteview | static/data/out/parties/HSall_parties.csv (complete file) | C, E cross-check | 2026-11-06 |
 
 FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves incomplete periods blank (e.g. 2026).
 
 `_transcripts/` keeps the exact text copied out of the browser and the two scripts that rebuilt the files from it
 (`decode_fred.py`, `decode_owid.py`), so each rebuild can be re-run and re-checked.
 
+**Large files** (Voteview) were fetched the same way, then saved through the browser's own download (approved by the researcher
+2026-11-06) and copied here; the copy's SHA-256 equals the hash the browser computed on the fetched bytes.
+
 ## Still to pull (all sites approved by the researcher on 2026-11-06)
 
 | Item | Planned source |
 | --- | --- |
 | A19 homicide rate 1900+ | CDC/NCHS vital statistics (HSUS for early years); no long-run US series found on OWID |
-| A20 real S&P total return | Shiller long-run data (`ie_data.xls`) |
-| A25 primary energy production | EIA Monthly Energy Review Table 1.1 |
 | A15/A21 check; defense % GDP | OMB Historical Tables 1.2, 3.1, 7.1 |
 | B2, B4 income and wealth shares | WID (`sptinc`, `shweal`, p0p50 / p50p90 / p90p100 / p99p100) |
 | B3 wage percentiles | EPI State of Working America Data Library |
@@ -76,11 +80,7 @@ Six places where the data and the frozen plan did not line up exactly were put t
 carried-forward values treated as missing, quarterly unemployment from 1948Q1, Hispanic unemployment from 1974,
 BLS annual productivity, and the Wieland & Yang (2020) Romer-Romer extension.
 
-## Open data questions (put to the researcher; no analysis run)
+## Decided after part 4 (logged in `../../DEVIATIONS.md`, 2026-11-06)
 
-- **A18 uninsured rate: no single consistent series from 1987.** Census publishes CPS estimates in pieces with method
-  breaks: original 1987-2005 (with overlap years 1999, 2004), HIB-1 1999-2012, and HHI-01 2017-2025. There is no CPS
-  historical table for 2013-2016 (the 2014 questionnaire redesign). The ACS gives a consistent national series for
-  2008-2025 (2020 not published). How to join them is to be decided and logged in `DEVIATIONS.md` before use.
-- **B10, 1969:** P-40 shows 58.9; the ratio of P-38's medians is 60.5. All other years agree to rounding.
-
+- **A18:** CPS changes 1987-2008 (within consistent pieces), ACS changes 2009-2025; changes touching 2020 missing.
+- **B10:** ratio computed from P-38 medians for all years; P-40 is the check (they differ only in 1969: 60.5 vs 58.9).

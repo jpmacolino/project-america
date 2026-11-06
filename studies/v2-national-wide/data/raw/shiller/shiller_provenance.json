@@ -1,0 +1,12 @@
+{
+ "SHILLER_ie_data__JanDec_1899plus.csv": {
+  "url": "https://img1.wsimg.com/blobby/go/e5e77e0b-59d1-44d9-ab25-4763ac982e53/downloads/1449043e-a1ed-4e2e-8e9c-7b9a2a064493/ie_data.xls?ver=1791297298731",
+  "landing_page": "https://shillerdata.com/ (linked from http://www.econ.yale.edu/~shiller/data.htm as 'U.S. Stock Markets 1871-Present and CAPE Ratio')",
+  "table": "Robert J. Shiller, ie_data.xls, sheet 'Data': monthly S&P Composite price, dividends, earnings, CPI, real total return price; data through October 2026",
+  "file_sha256": "98a54927942e842ec07ffe73000998e793953708c345b6b27bb363e9ada8366a",
+  "file_bytes": 1675264,
+  "extract": "legacy .xls (BIFF8) read in the browser by a hand-written OLE/BIFF reader; sheet 'Data', January (.01) and December (.12) rows from 1899.01 to 2026.01; columns A Date, B P (S&P Composite, monthly average of daily closes), C D (dividends, annualised), E CPI, J Real Total Return Price; numbers written in JavaScript's shortest round-trip form. Recent dividends are Shiller's own estimates/interpolations as published. The file is updated monthly; its hash is specific to this pull.",
+  "extract_sha256": "5d814c7dbfa986055053aeaa581ce25bc3eb90779430de1ab243a307bd719e49",
+  "pulled": "2026-11-06"
+ }
+}

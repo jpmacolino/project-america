@@ -1,0 +1,11 @@
+{
+ "EIA_MER_T01.01__TEPRBUS_annual.csv": {
+  "url": "https://www.eia.gov/totalenergy/data/browser/csv.php?tbl=T01.01",
+  "table": "EIA Monthly Energy Review, Table 1.1 Primary Energy Overview (all series, monthly and annual)",
+  "file_sha256": "f3b8529084a30ccf9b2e0a20c33c497bf491c97bfc45ac9216fe3ef488bb48bb",
+  "file_bytes": 747331,
+  "extract": "header line plus every line for MSN TEPRBUS (Total Primary Energy Production, quadrillion Btu) whose YYYYMM ends in 13 (EIA's annual total), 1949-2025; lines verbatim, CRLF line ends changed to LF. The source file is revised monthly, so its hash is specific to this pull.",
+  "extract_sha256": "195164efdc4f9b715b8e8c6277a7b0b8ce3616dc18e16c223048a59304fb1b61",
+  "pulled": "2026-11-06"
+ }
+}
