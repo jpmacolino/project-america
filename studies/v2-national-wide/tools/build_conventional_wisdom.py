@@ -79,7 +79,7 @@ lines = [
     ("Tests cut", "=SUMIFS('Conventional wisdom'!$Q:$Q,'Conventional wisdom'!$P:$P,\"Cut\")"),
     ("Tests in the original draft", "=SUM('Conventional wisdom'!$Q:$Q)"),
     (None, None),
-    ("Test counting", "A and B rows count 2 tests (party, Congress ideology). E1 holds the 32 president-ideology tests. "
+    ("Test counting", "A and B rows count 2 tests (party, Congress ideology). E1 holds the 37 president-ideology tests. "
      "C rows: 6 core outcomes each. D1: 3 horizons x 6. F1: 4 quarterly series."),
 ]
 for i, (a, b) in enumerate(lines, start=1):

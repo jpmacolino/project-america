@@ -93,7 +93,7 @@ Southern Democrats vote with Republicans on some issues. Dimension 2 is reported
 
 | Variable | Definition |
 | --- | --- |
-| `pres_dim1` | The President's score |
+| `pres_dim1` | The President's score (descriptive only; see scope decisions in Section 9) |
 | `house_median_dim1`, `senate_median_dim1` | Score of the median member of each chamber (the pivotal vote) |
 | `congress_dim1` | Average of the two chamber medians (primary Congress measure) |
 | `polarization` | Distance between the Democratic and Republican medians, averaged over the chambers |
@@ -118,7 +118,7 @@ smallest effect size of interest per year, used for equivalence tests. Sources a
 source cannot be obtained, the outcome is dropped and logged in `DEVIATIONS.md`. No substitute is added
 as confirmatory after data has been seen.
 
-### 4.1 Family A — national averages (20 outcomes)
+### 4.1 Family A — national averages (25 outcomes listed; 24 confirmatory after scope decisions)
 
 The 14 v1 outcomes, with their v1 definitions and thresholds, plus:
 
@@ -130,6 +130,15 @@ The 14 v1 outcomes, with their v1 definitions and thresholds, plus:
 | Uninsured rate (change) | Census CPS/ACS health insurance tables | 1987 | 0.25 pp/yr |
 | Homicide rate (log change) | CDC/NCHS vital statistics (historical series via HSUS or OWID) | 1900 | 3 %/yr |
 | Real S&P total stock return | Shiller long-run data | 1900 | 5 pp/yr |
+| Federal revenue, % GDP (change) | MeasuringWorth via Ecdat (already in the repo); OMB Historical Tables as a check | 1900 | 0.25 pp/yr |
+| Real private business investment growth | BEA NIPA (gross private domestic investment, chained dollars) | 1929 | 2.0 pp/yr |
+| New business formation: establishment entry rate (change) | Census Business Dynamics Statistics | 1978 | 0.25 pp/yr |
+| Labor productivity growth, nonfarm business | BLS Productivity and Costs | 1947 | 0.5 pp/yr |
+| Domestic primary energy production growth | EIA Monthly Energy Review, Table 1.1 | 1949 | 2 %/yr |
+
+The last five were added on 2026-11-06, before any data was pulled, to balance the outcome list: the original
+list leaned toward areas the left emphasizes (poverty, inequality, group gaps). The federal surplus/deficit
+row is listed but **cut** from testing (it nearly duplicates the debt row).
 
 ### 4.2 Family B — who benefits (group gaps)
 
@@ -152,7 +161,7 @@ test of whether one party favours one group *relative to* another.
 | B11 | Education | Unemployment rate (change) | No HS diploma, HS, some college, BA+ | No diploma vs BA+ | BLS, 1992 |
 | B12 | Region | Real per-capita personal income growth | 8 BEA regions | Poorest vs richest region in 1929 | BEA, 1929 |
 
-B11 starts in 1992 and has very little power. It is included so a null cannot be blamed on omission.
+B11 starts in 1992 and has very little power. It is **descriptive only**: reported, but not counted toward the verdict.
 
 ### 4.3 Core outcomes (used where a family needs a short list)
 
@@ -171,7 +180,8 @@ v1 tested effects 0–2 years out. Here:
 | Cumulative exposure: share of the past N years with a Democratic President, against the N-year change | N = 4, 8, 10, 20 | Do long stretches of one-party rule accumulate? |
 | Placebo leads: party at t+1 … t+4 against the change in year t | — | Future party control must *not* predict the past. A "hit" means reverse causality or confounding |
 
-Confirmatory tests: local projections for the 6 core outcomes at h = 4, 8, 10, 20 (24 tests).
+Confirmatory tests: local projections for the 6 core outcomes at h = 4, 8 and 10 (18 tests). The 20-year horizon
+is reported as descriptive only.
 Exposure and placebo results are reported but not confirmatory.
 
 **Caveat, stated in advance.** 125 years contain about six non-overlapping 20-year windows.
@@ -216,6 +226,9 @@ Every confirmatory model is run twice, without and with these controls. Results 
 
 The question this answers: once luck is removed, how much of any party gap is left?
 
+For the labor-productivity outcome, the productivity control is dropped from its luck-controlled model, since
+controlling for an outcome with itself would make the test meaningless.
+
 ---
 
 ## 9. Statistical plan and decision rules
@@ -236,9 +249,21 @@ Newey–West (HAC) p-values are reported alongside.
 
 **Multiple testing.**
 
-- Benjamini–Hochberg false-discovery rate, q < 0.05, within each family: A (20), B (12), C (24),
-  D (24), E (64: 2 ideology treatments × 20 averages + 2 × 12 group contrasts), F (4), 148 in all.
-- Also reported: one global correction across all 148 tests.
+- Benjamini–Hochberg false-discovery rate, q < 0.05, within each family: A (24), B (11), C (24),
+  D (18), E (35: the Congress ideology score against the 24 averages and 11 group contrasts), F (4), 116 in all.
+- Also reported: one global correction across all 116 tests.
+
+**Scope decisions (made 2026-11-06, before any data was pulled; recorded row by row in
+`conventional_wisdom.xlsx`).** The draft listed 163 possible tests. These were removed from the confirmatory set:
+
+| Item | Decision | Tests | Reason |
+| --- | --- | --- | --- |
+| Federal surplus/deficit (A16) | Cut | 2 | Nearly duplicates the federal debt outcome |
+| Unemployment by education (B11) | Descriptive | 2 | Starts 1992; about 8 terms, almost no power |
+| 20-year horizon (D2) | Descriptive | 6 | Only about 6 independent 20-year windows |
+| President's ideology score (E1) | Descriptive | 37 | Presidents' scores largely repeat their party |
+
+Descriptive results are still reported in full; they do not count toward any verdict.
 
 **Equivalence.** TOST at α = 0.05 against each outcome's SESOI. An outcome is "no meaningful effect" only
 if its 90% confidence interval lies entirely inside ±SESOI.
@@ -257,7 +282,7 @@ is primary and which is the sensitivity check.
 | Survives FDR but loses significance with luck controls | Association real, **not attributable** to party |
 | Fails FDR, equivalence shown | **No meaningful effect** (null accepted for that outcome) |
 | Fails FDR, no equivalence | **Inconclusive** |
-| Survives global FDR across all 148 | Flagged as the study's **headline** finding |
+| Survives global FDR across all 116 | Flagged as the study's **headline** finding |
 
 The overarching "party is meaningless" null is rejected if at least one test earns **Reject H0**.
 
@@ -296,6 +321,11 @@ labels mapped poorly onto these positions. That is exactly why Part E uses ideol
 | Women-to-men earnings | Equal-pay policy narrows the gap | No specific claim |
 | Debt and deficits | Not a central claim | Lower deficits and debt |
 | Stock returns | Not a central claim | Business-friendly policy raises returns |
+| Tax burden (federal revenue, % GDP) | Revenue funds services; tax the wealthy more | Lower taxes leave more with citizens |
+| Private business investment | Public investment crowds it in | Lower taxes and deregulation spur it |
+| New business formation | Safety net and small-business programs encourage risk-taking | Lower taxes and lighter regulation encourage start-ups |
+| Productivity growth | Education, research and infrastructure raise it | Competition and deregulation raise it |
+| Domestic energy production | Clean-energy investment expands supply | "Drill" policies and permitting expand supply |
 | Homicide | Social programs reduce crime | Tougher enforcement reduces crime |
 | Uninsured rate | Lower (coverage expansion) | Market reforms lower costs; no claim on rate |
 | Oil and commodity prices | No claim | "Drill" policies lower energy prices |
