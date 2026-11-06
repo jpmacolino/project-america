@@ -1,4 +1,38 @@
 {
- "CENSUS_hstpov2__colsA_D.csv": {"url": "https://www2.census.gov/programs-surveys/cps/tables/time-series/historical-poverty-people/hstpov2.xlsx", "table": "CPS ASEC Historical Poverty Table 2: Poverty Status of People by Family Relationship, Race, and Hispanic Origin, 1959-2025", "file_sha256": "291be705f17706b9d9ce34467afd7a65e65a4745d8d7ca969c0206f24b8d438b", "file_bytes": 49539, "extract": "column A (year label, footnote numbers kept) and column D (all people, percent below poverty); race blocks All Races, White Alone, White, White Alone Not Hispanic, White Not Hispanic, Black Alone or in Combination, Black Alone, Black, Hispanic (any race); block label rows kept; cell values as stored in the workbook XML", "extract_sha256": "d4097b44104562cfcefd21b46f0b72c334bceba5e2579b60b17ccaa46988a34f", "pulled": "2026-11-06"},
- "CENSUS_hstpov3__colsA_E_M_Q.csv": {"url": "https://www2.census.gov/programs-surveys/cps/tables/time-series/historical-poverty-people/hstpov3.xlsx", "table": "CPS ASEC Historical Poverty Table 3: Poverty Status of People by Age, Race, and Hispanic Origin, 1959-2025", "file_sha256": "834eb03406d16cee93df31a569b31f5c1be408b27268c05954c3e80f19d202c6", "file_bytes": 61910, "extract": "All Races block; column A (year label), E (under 18, percent in poverty), M (18-64, percent), Q (65 and over, percent); 'N' = not available as published", "extract_sha256": "898d70f6405683b31f5178b0e3b4767097633549d44752d2358d43d8c4ea2039", "pulled": "2026-11-06"}
+ "CENSUS_hstpov2__colsA_D.csv": {
+  "url": "https://www2.census.gov/programs-surveys/cps/tables/time-series/historical-poverty-people/hstpov2.xlsx",
+  "table": "CPS ASEC Historical Poverty Table 2: Poverty Status of People by Family Relationship, Race, and Hispanic Origin, 1959-2025",
+  "file_sha256": "291be705f17706b9d9ce34467afd7a65e65a4745d8d7ca969c0206f24b8d438b",
+  "file_bytes": 49539,
+  "extract": "column A (year label, footnote numbers kept) and column D (all people, percent below poverty); race blocks All Races, White Alone, White, White Alone Not Hispanic, White Not Hispanic, Black Alone or in Combination, Black Alone, Black, Hispanic (any race); block label rows kept; cell values as stored in the workbook XML",
+  "extract_sha256": "d4097b44104562cfcefd21b46f0b72c334bceba5e2579b60b17ccaa46988a34f",
+  "pulled": "2026-11-06"
+ },
+ "CENSUS_hstpov3__colsA_E_M_Q.csv": {
+  "url": "https://www2.census.gov/programs-surveys/cps/tables/time-series/historical-poverty-people/hstpov3.xlsx",
+  "table": "CPS ASEC Historical Poverty Table 3: Poverty Status of People by Age, Race, and Hispanic Origin, 1959-2025",
+  "file_sha256": "834eb03406d16cee93df31a569b31f5c1be408b27268c05954c3e80f19d202c6",
+  "file_bytes": 61910,
+  "extract": "All Races block; column A (year label), E (under 18, percent in poverty), M (18-64, percent), Q (65 and over, percent); 'N' = not available as published",
+  "extract_sha256": "898d70f6405683b31f5178b0e3b4767097633549d44752d2358d43d8c4ea2039",
+  "pulled": "2026-11-06"
+ },
+ "CENSUS_f01ar__2025dollars_colsA_C-G.csv": {
+  "url": "https://www2.census.gov/programs-surveys/cps/tables/time-series/historical-income-families/f01ar.xlsx",
+  "table": "Table F-1. Limits for Family Income Quintiles and Top 5 Percent of All Families: 1947 to 2025",
+  "file_sha256": "daf533559caac613b94f97de0d5b8f1914eac20d318fcafb73d7670928e90b19",
+  "file_bytes": 14723,
+  "extract": "'2025 Dollars' block; column A (year label), C-F (upper limits of lowest, second, third, fourth quintiles = 20th/40th/60th/80th percentiles), G (lower limit of top 5 percent = 95th percentile)",
+  "extract_sha256": "45dd051b0719fd10cc9be7ce0d32a76a673b0cd923037324feb2a1b215c473db",
+  "pulled": "2026-11-06"
+ },
+ "CENSUS_f07ar__AllFamilies_colsA_D.csv": {
+  "url": "https://www2.census.gov/programs-surveys/cps/tables/time-series/historical-income-families/f07ar.xlsx",
+  "table": "Table F-7. Median and Mean Family Income of All Families by Type of Family: 1947 to 2025",
+  "file_sha256": "b5284ece854e63d73b54e6765e24c3aa3217c44958ce1c4105d59cac158c9ce6",
+  "file_bytes": 19676,
+  "extract": "'All Families' block; column A (year label), D (median income, 2025 dollars). Spot check: 1953-2025 values equal FRED MEFAINUSA672N",
+  "extract_sha256": "eb6f052aeca0af0038b40933e93cb3b43c1ff9f8f808115b6fde365080656483",
+  "pulled": "2026-11-06"
+ }
 }

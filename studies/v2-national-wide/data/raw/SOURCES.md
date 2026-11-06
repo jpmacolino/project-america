@@ -37,6 +37,8 @@ below matched.
 | `owid/OWID_income-share-top-1-before-tax-wid__USA.csv` | OWID / WID | grapher `income-share-top-1-before-tax-wid` | A7 | 2026-11-06 |
 | `census/CENSUS_hstpov2__colsA_D.csv` | Census CPS ASEC Historical Poverty Table 2 | hstpov2.xlsx, cols A and D, race blocks (see `census/census_provenance.json`) | A6, B6 | 2026-11-06 |
 | `census/CENSUS_hstpov3__colsA_E_M_Q.csv` | Census CPS ASEC Historical Poverty Table 3 | hstpov3.xlsx, All Races, under 18 / 18-64 / 65+ | B8 | 2026-11-06 |
+| `census/CENSUS_f01ar__2025dollars_colsA_C-G.csv` | Census Table F-1 | f01ar.xlsx, 2025-dollar block: 20th/40th/60th/80th/95th percentile limits | B1 | 2026-11-06 |
+| `census/CENSUS_f07ar__AllFamilies_colsA_D.csv` | Census Table F-7 | f07ar.xlsx, all families, median income, 2025 dollars (first-listed row in duplicate years matches FRED for all 72 overlapping years) | A17 | 2026-11-06 |
 
 FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves incomplete periods blank (e.g. 2026).
 
@@ -48,8 +50,6 @@ FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves inc
 | Item | Planned source |
 | --- | --- |
 | A13, A14 attainment | Census CPS Table A-2 (`hst_attain02.xlsx`) |
-| A17 median family income 1947+ | Census Table F-7 (`.../historical-income-families/f07ar.xlsx`) |
-| B1 family income at percentile cut-offs | Census Table F-1 (`.../historical-income-families/f01ar.xlsx`) |
 | B7 household income by race | Census Table H-5 (`.../historical-income-households/h05.xlsx`) |
 | B10 women-to-men earnings ratio | Census Table P-38 / P-40 (`.../historical-income-people/p38.xlsx`, `p40.xlsx`) |
 | A18 uninsured rate | Census historical health insurance tables (CPS 1987+, ACS) |
