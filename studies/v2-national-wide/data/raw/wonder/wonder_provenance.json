@@ -91,5 +91,57 @@
   "request_xml_sha256": "31af8eb10891d9dc5d322fa5ef67b2e8814632372d5de26aaee75577b136b6d4",
   "response_sha256": "ac14c19bae21e02cf37977ca0724905102b29c4b983c6e595257555cc2e67ec4",
   "response_bytes": 122745
+ },
+ "WONDER_D74_CMF1968-1978__legal_intervention_E970-E978__by_year.xml": {
+  "dataset": "D74",
+  "overrides": {
+   "B_1": "year",
+   "cause": "F_D74.V2 = E970-E978 (legal intervention, incl. E978 legal execution)",
+   "O_precision": "9"
+  },
+  "note": "legal intervention deaths, pulled so A19 can be built with one definition across the 1967/68 join (see data notes)",
+  "extract_sha256": "48e8b2f05976994c37ee5c9de2380315ced9c1c7d02e4a7038e86f2f73a37b45",
+  "request_xml_sha256": "eaa87f5c1afdfef2ea23a91050cf9e1a06186fecd88ae8ffa79461bb5bfe7716",
+  "response_sha256": "7918737601ca9ddbaf90a58c3d8ee8a16e28aa41f5bdd6f92c1d8f11dfda9156",
+  "response_bytes": 35063
+ },
+ "WONDER_D16_CMF1979-1998__legal_intervention_E970-E978__by_year.xml": {
+  "dataset": "D16",
+  "overrides": {
+   "B_1": "year",
+   "cause": "F_D16.V2 = E970-E978",
+   "O_precision": "9"
+  },
+  "note": "legal intervention deaths, pulled so A19 can be built with one definition across the 1967/68 join (see data notes)",
+  "extract_sha256": "cb53b224726a93c3d12ec0c9982d165670c5e4a17e9ee539526717c3c1846f64",
+  "request_xml_sha256": "4fe289da96a17ec8b271ce60214685a67b3c3ce7d7e7f59862c700d69a999291",
+  "response_sha256": "7804019a7b0cc1ebdc5fd95b6ecb9e40e70c2d41adc30e173184e41ce0e8998e",
+  "response_bytes": 57540
+ },
+ "WONDER_D76_UCD1999-2020__legal_intervention_GR113-130__by_year.xml": {
+  "dataset": "D76",
+  "overrides": {
+   "B_1": "year",
+   "cause": "O_ucd = D76.V4, V_D76.V4 = GR113-130 #Legal intervention (Y35,Y89.0)",
+   "O_precision": "9"
+  },
+  "note": "legal intervention deaths, pulled so A19 can be built with one definition across the 1967/68 join (see data notes)",
+  "extract_sha256": "90e5133319287886b7e249a2672a82a008b3492ed941bdaaf4ec91d6709f7069",
+  "request_xml_sha256": "d3554f01516e1616ea5ac5155e842cd68ee1fe829a7c61251d4c8cb0dd24729d",
+  "response_sha256": "62f3eb5e233fd9b6ec5f671361e49cb85337e72c1634108282f6e9cf8909c7f5",
+  "response_bytes": 122045
+ },
+ "WONDER_D158_UCD2018-2024__legal_intervention_GR113-130__by_year.xml": {
+  "dataset": "D158",
+  "overrides": {
+   "B_1": "year",
+   "cause": "O_ucd = D158.V4, V_D158.V4 = GR113-130",
+   "O_precision": "9"
+  },
+  "note": "legal intervention deaths, pulled so A19 can be built with one definition across the 1967/68 join (see data notes)",
+  "extract_sha256": "33089e3d930456b332322606055727031affeee0bd33ac0c43b4826e97e2e598",
+  "request_xml_sha256": "473a9c6ae8fe0bd376160fdc17da30f6e6588dbc742716c2e8c2951fd57ac2e8",
+  "response_sha256": "72764addba85ed82cc3b028c9e39856fd0358f6e1d825c635dacb9253a44dca6",
+  "response_bytes": 121505
  }
 }

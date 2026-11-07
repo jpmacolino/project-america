@@ -1,0 +1,44 @@
+<!-- query-date: Nov 7, 2026 12:23:35 AM -->
+<variable-selections>
+	<variable code="D74.V2" from-finder="true">
+		<partial var-code="D74.V2-level1" code="E800-E999" label="Accidents, poisonings, and violence (external cause)"/>
+		<value code="E970-E978" label="Legal intervention"/>
+	</variable>
+	<variable code="D74.V4" from-finder="true">
+		<partial var-code="D74.V4-level1" code="GR69-800" label="Homicide (E960-E978)"/>
+		<value code="E970" label="Injury due to legal intervention by firearms (E970)"/>
+		<value code="E971" label="Injury due to legal intervention by explosives (E971)"/>
+		<value code="E972" label="Injury due to legal intervention by gas (E972)"/>
+		<value code="E973" label="Injury due to legal intervention by blunt object (E973)"/>
+		<value code="E974" label="Injury due to legal intervention by cutting and piercing instruments (E974)"/>
+		<value code="E975" label="Injury due to legal intervention by other specified means (E975)"/>
+		<value code="E976" label="Injury due to legal intervention by unspecified means (E976)"/>
+		<value code="E977" label="Late effect of injury due to legal intervention (E977)"/>
+		<value code="E978" label="Legal execution (E978)"/>
+	</variable>
+</variable-selections>
+<byvariables>
+	<variable code="D74.V1"/>
+</byvariables>
+<measure-selections>
+	<measure code="D74.M1"/>
+	<measure code="D74.M2"/>
+	<measure code="D74.M3"/>
+</measure-selections>
+<data-table show-all-labels="false">
+<r><c l="1968"/><c v="350"/><c v="199,533,564"/><c v="0.175409086"/></r>
+<r><c l="1969"/><c v="354"/><c v="201,568,206"/><c v="0.175622935"/></r>
+<r><c l="1970"/><c v="333"/><c v="203,458,035"/><c v="0.163670115"/></r>
+<r><c l="1971"/><c v="412"/><c v="206,782,970"/><c v="0.199242713"/></r>
+<r><c l="1972"/><c v="300"/><c v="209,237,411"/><c v="0.143377802"/></r>
+<r><c l="1973"/><c v="376"/><c v="211,361,965"/><c v="0.177893880"/></r>
+<r><c l="1974"/><c v="375"/><c v="213,436,958"/><c v="0.175695907"/></r>
+<r><c l="1975"/><c v="336"/><c v="215,457,198"/><c v="0.155947447"/></r>
+<r><c l="1976"/><c v="294"/><c v="217,615,788"/><c v="0.135100492"/></r>
+<r><c l="1977"/><c v="269"/><c v="219,808,632"/><c v="0.122379179"/></r>
+<r><c l="1978"/><c v="266"/><c v="222,102,279"/><c v="0.119764642"/></r>
+<r><c c="1"/><c dt="3,665"/><c dt="2,320,363,006"/><c dt="0.157949424"/></r>
+</data-table>
+<footnotes>
+</footnotes>
+<citation>Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics System, Mortality:  Compressed Mortality File  1968-1978.  CDC WONDER Online Database, compiled from Compressed Mortality File CMF 1968-1988, Series 20, No. 2A, 2000.</citation>

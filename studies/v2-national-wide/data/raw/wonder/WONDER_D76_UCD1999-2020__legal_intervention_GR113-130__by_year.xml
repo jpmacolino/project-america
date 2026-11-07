@@ -1,0 +1,46 @@
+<!-- query-date: Nov 7, 2026 12:24:43 AM -->
+<variable-selections>
+	<variable code="D76.V4" from-finder="false">
+		<value code="GR113-130"/>
+	</variable>
+</variable-selections>
+<byvariables>
+	<variable code="D76.V1-level1"/>
+</byvariables>
+<measure-selections>
+	<measure code="D76.M1"/>
+	<measure code="D76.M2"/>
+	<measure code="D76.M3"/>
+</measure-selections>
+<data-table show-all-labels="false">
+<r><c l="1999"/><c v="398"/><c v="279,040,168"/><c v="0.142631795"/></r>
+<r><c l="2000"/><c v="359"/><c v="281,421,906"/><c v="0.127566473"/></r>
+<r><c l="2001"/><c v="396"/><c v="284,968,955"/><c v="0.138962506"/></r>
+<r><c l="2002"/><c v="384"/><c v="287,625,193"/><c v="0.133507081"/></r>
+<r><c l="2003"/><c v="423"/><c v="290,107,933"/><c v="0.145807802"/></r>
+<r><c l="2004"/><c v="372"/><c v="292,805,298"/><c v="0.127046881"/></r>
+<r><c l="2005"/><c v="414"/><c v="295,516,599"/><c v="0.140093653"/></r>
+<r><c l="2006"/><c v="434"/><c v="298,379,912"/><c v="0.145452151"/></r>
+<r><c l="2007"/><c v="412"/><c v="301,231,207"/><c v="0.136772018"/></r>
+<r><c l="2008"/><c v="381"/><c v="304,093,966"/><c v="0.125290220"/></r>
+<r><c l="2009"/><c v="395"/><c v="306,771,529"/><c v="0.128760319"/></r>
+<r><c l="2010"/><c v="412"/><c v="308,745,538"/><c v="0.133443224"/></r>
+<r><c l="2011"/><c v="492"/><c v="311,591,917"/><c v="0.157898833"/></r>
+<r><c l="2012"/><c v="550"/><c v="313,914,040"/><c v="0.175207200"/></r>
+<r><c l="2013"/><c v="516"/><c v="316,128,839"/><c v="0.163224590"/></r>
+<r><c l="2014"/><c v="515"/><c v="318,857,056"/><c v="0.161514381"/></r>
+<r><c l="2015"/><c v="530"/><c v="321,418,820"/><c v="0.164893891"/></r>
+<r><c l="2016"/><c v="549"/><c v="323,127,513"/><c v="0.169901967"/></r>
+<r><c l="2017"/><c v="616"/><c v="325,719,178"/><c v="0.189119966"/></r>
+<r><c l="2018"/><c v="618"/><c v="327,167,434"/><c v="0.188894106"/></r>
+<r><c l="2019"/><c v="652"/><c v="328,239,523"/><c v="0.198635434"/></r>
+<r><c l="2020"/><c v="780"/><c v="329,484,123"/><c v="0.236733714"/></r>
+<r><c c="1"/><c dt="10,598"/><c dt="6,746,356,647"/><c dt="0.157092199"/></r>
+</data-table>
+<footnotes>
+</footnotes>
+<citation>Centers for Disease Control and Prevention, National Center for Health Statistics. 
+		National Vital Statistics System, Mortality 1999-2020 on CDC WONDER Online Database, released in 2021. 
+		Data are from the Multiple Cause of Death Files, 1999-2020, 
+		as compiled from data provided by the 57 vital statistics jurisdictions through the 
+		Vital Statistics Cooperative Program.</citation>

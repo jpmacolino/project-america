@@ -1,0 +1,33 @@
+<!-- query-date: Nov 7, 2026 12:25:27 AM -->
+<variable-selections>
+	<variable code="D158.V4" from-finder="false">
+		<value code="GR113-130"/>
+	</variable>
+</variable-selections>
+<byvariables>
+	<variable code="D158.V1-level1"/>
+</byvariables>
+<measure-selections>
+	<measure code="D158.M1"/>
+	<measure code="D158.M2"/>
+	<measure code="D158.M3"/>
+	<measure code="D158.M32"/>
+	<measure code="D158.M33"/>
+</measure-selections>
+<data-table show-all-labels="false">
+<r><c l="2018"/><c v="618"/><c v="327,167,434"/><c v="0.188894106" a="c"><l v="(0.174001173 - 0.203787039)"/></c></r>
+<r><c l="2019"/><c v="652"/><c v="328,239,523"/><c v="0.198635434" a="c"><l v="(0.183388272 - 0.213882595)"/></c></r>
+<r><c l="2020"/><c v="780"/><c v="329,484,123"/><c v="0.236733714" a="c"><l v="(0.220119917 - 0.253347510)"/></c></r>
+<r><c l="2021"/><c v="669"/><c v="331,893,745"/><c v="0.201570536" a="c"><l v="(0.186295928 - 0.216845143)"/></c></r>
+<r><c l="2022"/><c v="810"/><c v="333,287,557"/><c v="0.243033376" a="c"><l v="(0.226296304 - 0.259770447)"/></c></r>
+<r><c l="2023"/><c v="764"/><c v="334,914,895"/><c v="0.228117654" a="c"><l v="(0.211941760 - 0.244293547)"/></c></r>
+<r><c l="2024 "/><c v="844"/><c v="340,110,988"/><c v="0.248154288" a="c"><l v="(0.231412315 - 0.264896261)"/></c></r>
+<r><c c="1"/><c dt="5,137"/><c dt="2,325,098,265"/><c dt="0.220936899" a="c"><l v="(0.214895054 - 0.226978743)"/></c></r>
+</data-table>
+<footnotes>
+</footnotes>
+<citation>Centers for Disease Control and Prevention, National Center for Health Statistics. 
+		National Vital Statistics System, Mortality 2018-2024 on CDC WONDER Online Database, released in 2026. 
+		Data are from the Multiple Cause of Death Files, 2018-2024, 
+		as compiled from data provided by the 57 vital statistics jurisdictions through the 
+		Vital Statistics Cooperative Program.</citation>
