@@ -1,0 +1,36 @@
+year,rate_per_100k,source_file,source_table,pdf_page,icd_revision,cause_codes,read_from
+1933,9.7,vsrates1900_40.pdf,"Linder & Grove (1943) Table 15, line 23 (Homicide, both sexes): Death-registration States",278 (book p. 273),4th (codes shown in 1938-revision numbers),165-168,page image (scanned; text layer is OCR and unreliable)
+1934,9.5,vsrates1900_40.pdf,"Linder & Grove (1943) Table 15, line 23",278 (book p. 273),4th (codes shown in 1938-revision numbers),165-168,page image
+1935,8.3,vsrates1900_40.pdf,"Linder & Grove (1943) Table 15, line 23",278 (book p. 273),4th (codes shown in 1938-revision numbers),165-168,page image
+1936,8.0,vsrates1900_40.pdf,"Linder & Grove (1943) Table 15, line 23",278 (book p. 273),4th (codes shown in 1938-revision numbers),165-168,page image
+1937,7.6,vsrates1900_40.pdf,"Linder & Grove (1943) Table 15, line 23",278 (book p. 273),4th (codes shown in 1938-revision numbers),165-168,page image
+1938,6.8,vsrates1900_40.pdf,"Linder & Grove (1943) Table 15, line 23",278 (book p. 273),4th (codes shown in 1938-revision numbers),165-168,page image
+1939,6.4,vsrates1900_40.pdf,"Linder & Grove (1943) Table 15, line 23",278 (book p. 273),5th,165-168,page image
+1940,6.2,mx194049.pdf,"HIST290 Table 2, Homicide, all races, both sexes, total",homicide table (end of file),5th,165-168,PDF text layer (also 6.2 in Linder & Grove Table 15)
+1941,6.0,mx194049.pdf,"HIST290 Table 2, Homicide, all races, both sexes, total",homicide table (end of file),5th,165-168,PDF text layer
+1942,5.8,mx194049.pdf,"HIST290 Table 2, Homicide, all races, both sexes, total",homicide table (end of file),5th,165-168,PDF text layer
+1943,5.0,mx194049.pdf,"HIST290 Table 2, Homicide, all races, both sexes, total",homicide table (end of file),5th,165-168,PDF text layer
+1944,4.9,mx194049.pdf,"HIST290 Table 2, Homicide, all races, both sexes, total",homicide table (end of file),5th,165-168,PDF text layer
+1945,5.6,mx194049.pdf,"HIST290 Table 2, Homicide, all races, both sexes, total",homicide table (end of file),5th,165-168,PDF text layer
+1946,6.3,mx194049.pdf,"HIST290 Table 2, Homicide, all races, both sexes, total",homicide table (end of file),5th,165-168,PDF text layer
+1947,6.0,mx194049.pdf,"HIST290 Table 2, Homicide, all races, both sexes, total",homicide table (end of file),5th,165-168,PDF text layer
+1948,5.8,mx194049.pdf,"HIST290 Table 2, Homicide, all races, both sexes, total",homicide table (end of file),5th,165-168,PDF text layer
+1949,5.4,mx194049.pdf,"HIST290 Table 2, Homicide, all races, both sexes, total",homicide table (end of file),6th,"E964, E980-E985",PDF text layer
+1950,5.3,mx1950_59.pdf,"HIST290, Homicide (E964, E980-E985), both sexes, total",homicide table (end of file),6th,"E964, E980-E985",PDF text layer
+1951,4.9,mx1950_59.pdf,"HIST290, Homicide (E964, E980-E985), both sexes, total",homicide table (end of file),6th,"E964, E980-E985",PDF text layer
+1952,5.2,mx1950_59.pdf,"HIST290, Homicide (E964, E980-E985), both sexes, total",homicide table (end of file),6th,"E964, E980-E985",PDF text layer
+1953,4.8,mx1950_59.pdf,"HIST290, Homicide (E964, E980-E985), both sexes, total",homicide table (end of file),6th,"E964, E980-E985",PDF text layer
+1954,4.8,mx1950_59.pdf,"HIST290, Homicide (E964, E980-E985), both sexes, total",homicide table (end of file),6th,"E964, E980-E985",PDF text layer
+1955,4.5,mx1950_59.pdf,"HIST290, Homicide (E964, E980-E985), both sexes, total",homicide table (end of file),6th,"E964, E980-E985",PDF text layer
+1956,4.6,mx1950_59.pdf,"HIST290, Homicide (E964, E980-E985), both sexes, total",homicide table (end of file),6th,"E964, E980-E985",PDF text layer
+1957,4.5,mx1950_59.pdf,"HIST290, Homicide (E964, E980-E985), both sexes, total",homicide table (end of file),6th,"E964, E980-E985",PDF text layer
+1958,4.5,mx1950_59.pdf,"HIST290, Homicide (E964, E980-E985), both sexes, total",homicide table (end of file),7th,"E964, E980-E985",PDF text layer
+1959,4.6,mx1950_59.pdf,"HIST290, Homicide (E964, E980-E985), both sexes, total",homicide table (end of file),7th,"E964, E980-E985",PDF text layer
+1960,4.7,mx196067.pdf,"HIST290 (trend table 290A), ICD-7 E964-E985 Homicide, both sexes, total",homicide table (end of file),7th,"E964-E985 (as printed)",PDF text layer
+1961,4.7,mx196067.pdf,"HIST290 (trend table 290A), ICD-7 E964-E985 Homicide, both sexes, total",homicide table (end of file),7th,"E964-E985 (as printed)",PDF text layer
+1962,4.9,mx196067.pdf,"HIST290 (trend table 290A), ICD-7 E964-E985 Homicide, both sexes, total",homicide table (end of file),7th,"E964-E985 (as printed)",PDF text layer
+1963,4.9,mx196067.pdf,"HIST290 (trend table 290A), ICD-7 E964-E985 Homicide, both sexes, total",homicide table (end of file),7th,"E964-E985 (as printed)",PDF text layer
+1964,5.1,mx196067.pdf,"HIST290 (trend table 290A), ICD-7 E964-E985 Homicide, both sexes, total",homicide table (end of file),7th,"E964-E985 (as printed)",PDF text layer
+1965,5.5,mx196067.pdf,"HIST290 (trend table 290A), ICD-7 E964-E985 Homicide, both sexes, total",homicide table (end of file),7th,"E964-E985 (as printed)",PDF text layer
+1966,5.9,mx196067.pdf,"HIST290 (trend table 290A), ICD-7 E964-E985 Homicide, both sexes, total",homicide table (end of file),7th,"E964-E985 (as printed)",PDF text layer
+1967,6.8,mx196067.pdf,"HIST290 (trend table 290A), ICD-7 E964-E985 Homicide, both sexes, total",homicide table (end of file),7th,"E964-E985 (as printed)",PDF text layer

@@ -1,0 +1,43 @@
+{
+ "NCHS_homicide_rate_1933-1967_transcribed.csv": {
+  "what": "US crude homicide death rate per 100,000, all races, both sexes, 1933-1967, typed by hand from NCHS published tables (one decimal, as printed)",
+  "sources": {
+   "vsrates1900_40.pdf": {
+    "url": "https://www.cdc.gov/nchs/data/vsus/vsrates1900_40.pdf",
+    "title": "Linder FE, Grove RD. Vital Statistics Rates in the United States, 1900-1940. Bureau of the Census, 1943 (scanned)",
+    "sha256": "33e22516da62567c96fb2e7ad8c27f8faaf571db035f22730ffd7f90bdada045",
+    "bytes": 81810894,
+    "last_modified": "Mon, 26 Jan 2009 18:24:23 GMT",
+    "used": "Table 15, Specific death rates for selected causes, by sex: death-registration States, 1900-1940; line 23 Homicide (165-168), both sexes; columns 1933-1940 on PDF page 278 (book p. 273). From 1933 the death-registration States are the whole continental US. Read from the page image at 200% zoom in two overlapping views; the 1940 value (6.2) matches HIST290."
+   },
+   "mx194049.pdf": {
+    "url": "https://www.cdc.gov/nchs/data/dvs/mx194049.pdf",
+    "title": "HIST290_4049: death rates for selected causes by 10-year age groups, race and sex, United States 1940-49",
+    "sha256": "47fbaa3345dc8cf26969a584216e1e34d9ce606cac84693f1660de08bc0b2db1",
+    "bytes": 4283644,
+    "last_modified": "Tue, 07 May 2024 04:15:18 GMT",
+    "used": "Table 2, HOMICIDE (Fifth revision 1940-48: 165-168; Sixth revision 1949: E964, E980-E985), ALL RACES, BOTH SEXES, Total column; read from the PDF's text layer"
+   },
+   "mx1950_59.pdf": {
+    "url": "https://www.cdc.gov/nchs/data/dvs/mx1950_59.pdf",
+    "title": "HIST290_5059, United States 1950-59",
+    "sha256": "b8d4b2b17e043818d71deec932ec44ef56f956f86db4810318a2dc3e76c67a9d",
+    "bytes": 7266810,
+    "last_modified": "Tue, 07 May 2024 04:15:19 GMT",
+    "used": "HOMICIDE (E964, E980-E985), BOTH SEXES, Total column; text layer"
+   },
+   "mx196067.pdf": {
+    "url": "https://www.cdc.gov/nchs/data/dvs/mx196067.pdf",
+    "title": "HIST290_6067, Table 290 death rates for 60 selected causes, United States 1960-67",
+    "sha256": "345d55b2c2ceb91765bdbca6d396a7a97b8499124d23f7166d7d0d17c35a6556",
+    "bytes": 450383,
+    "last_modified": "Tue, 07 May 2024 04:15:19 GMT",
+    "used": "ICD-7 Nos. E964-E985 Homicide, BOTH SEXES, Total column (first number after the year in each row; all totals are below 10 so the run-together text is unambiguous); text layer"
+   }
+  },
+  "page_links": "https://www.cdc.gov/nchs/nvss/mortality/hist290.htm",
+  "checks": "1940 appears in both Linder & Grove (6.2) and HIST290_4049 (6.2).",
+  "caveats": "Rates are printed to one decimal, so year-to-year log changes carry rounding error of up to about 1-2%. The ICD-6/7 homicide group (E964, E980-E985) appears to include injury by police intervention, which 1968+ (E960-E969) excludes; to be confirmed. Linder & Grove footnote: homicide includes legal executions for 1921-1929 only.",
+  "pulled": "2026-11-06"
+ }
+}

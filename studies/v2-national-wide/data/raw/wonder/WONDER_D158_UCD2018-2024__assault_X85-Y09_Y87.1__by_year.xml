@@ -1,0 +1,36 @@
+<!-- query-date: Nov 7, 2026 12:06:34 AM -->
+<variable-selections>
+	<variable code="D158.V2" from-finder="true">
+		<partial var-code="D158.V2-level1" code="V01-Y89" label="External causes of morbidity and mortality"/>
+		<value code="X85-Y09" label="Assault"/>
+		<partial var-code="D158.V2-level2" code="Y85-Y89" label="Sequelae of external causes of morbidity and mortality"/>
+		<value code="Y87.1" label="Sequelae of assault"/>
+	</variable>
+</variable-selections>
+<byvariables>
+	<variable code="D158.V1-level1"/>
+</byvariables>
+<measure-selections>
+	<measure code="D158.M1"/>
+	<measure code="D158.M2"/>
+	<measure code="D158.M3"/>
+	<measure code="D158.M32"/>
+	<measure code="D158.M33"/>
+</measure-selections>
+<data-table show-all-labels="false">
+<r><c l="2018"/><c v="18,829"/><c v="327,167,434"/><c v="5.755157159" a="c"><l v="(5.672951895 - 5.837362424)"/></c></r>
+<r><c l="2019"/><c v="19,121"/><c v="328,239,523"/><c v="5.825319214" a="c"><l v="(5.742749553 - 5.907888874)"/></c></r>
+<r><c l="2020"/><c v="24,575"/><c v="329,484,123"/><c v="7.458629501" a="c"><l v="(7.365375314 - 7.551883689)"/></c></r>
+<r><c l="2021"/><c v="26,031"/><c v="331,893,745"/><c v="7.843172820" a="c"><l v="(7.747892671 - 7.938452970)"/></c></r>
+<r><c l="2022"/><c v="24,849"/><c v="333,287,557"/><c v="7.455723887" a="c"><l v="(7.363021391 - 7.548426383)"/></c></r>
+<r><c l="2023"/><c v="22,829"/><c v="334,914,895"/><c v="6.816358526" a="c"><l v="(6.727935565 - 6.904781487)"/></c></r>
+<r><c l="2024 "/><c v="20,162"/><c v="340,110,988"/><c v="5.928064870" a="c"><l v="(5.846236818 - 6.009892923)"/></c></r>
+<r><c c="1"/><c dt="156,396"/><c dt="2,325,098,265"/><c dt="6.726425388" a="c"><l v="(6.693088307 - 6.759762470)"/></c></r>
+</data-table>
+<footnotes>
+</footnotes>
+<citation>Centers for Disease Control and Prevention, National Center for Health Statistics. 
+		National Vital Statistics System, Mortality 2018-2024 on CDC WONDER Online Database, released in 2026. 
+		Data are from the Multiple Cause of Death Files, 2018-2024, 
+		as compiled from data provided by the 57 vital statistics jurisdictions through the 
+		Vital Statistics Cooperative Program.</citation>

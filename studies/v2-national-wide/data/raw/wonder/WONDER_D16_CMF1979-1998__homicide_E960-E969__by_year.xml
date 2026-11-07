@@ -1,0 +1,75 @@
+<!-- query-date: Nov 7, 2026 12:09:42 AM -->
+<variable-selections>
+	<variable code="D16.V2" from-finder="true">
+		<partial var-code="D16.V2-level1" code="E800-E999" label="External causes of injury and poisoning"/>
+		<value code="E960-E969" label="Homicide and injury purposely inflicted by other persons"/>
+	</variable>
+	<variable code="D16.V4" from-finder="true">
+		<partial var-code="D16.V4-level1" code="GR72-830" label="Homicide and legal intervention  (E960-E978)"/>
+		<value code="E960.0" label="Unarmed fight or brawl (E960.0)"/>
+		<value code="E960.1" label="Rape (E960.1)"/>
+		<value code="E961" label="Assault by corrosive or caustic substance, except poisoning (E961)"/>
+		<value code="E962.0" label="Drugs and medicinal substances (E962.0)"/>
+		<value code="E962.1" label="Other solid and liquid substances (E962.1)"/>
+		<value code="E962.2" label="Other gases and vapors (E962.2)"/>
+		<value code="E962.9" label="Unspecified poisoning (E962.9)"/>
+		<value code="E963" label="Assault by hanging and strangulation (E963)"/>
+		<value code="E964" label="Assault by submersion (drowning) (E964)"/>
+		<value code="E965.0" label="Handgun (E965.0)"/>
+		<value code="E965.1" label="Shotgun (E965.1)"/>
+		<value code="E965.2" label="Hunting rifle (E965.2)"/>
+		<value code="E965.3" label="Military firearms (E965.3)"/>
+		<value code="E965.4" label="Other and unspecified firearm (E965.4)"/>
+		<value code="E965.5" label="Antipersonnel bomb (E965.5)"/>
+		<value code="E965.6" label="Gasoline bomb (E965.6)"/>
+		<value code="E965.7" label="Letter bomb (E965.7)"/>
+		<value code="E965.8" label="Other specified explosive (E965.8)"/>
+		<value code="E965.9" label="Unspecified explosive (E965.9)"/>
+		<value code="E966" label="Assault by cutting and piercing instrument (E966)"/>
+		<value code="E967.0" label="By parent (E967.0)"/>
+		<value code="E967.1" label="By other specified person (E967.1)"/>
+		<value code="E967.9" label="By unspecified person (E967.9)"/>
+		<value code="E968.0" label="Fire (E968.0)"/>
+		<value code="E968.1" label="Pushing from a high place (E968.1)"/>
+		<value code="E968.2" label="Striking by blunt or thrown object (E968.2)"/>
+		<value code="E968.3" label="Hot liquid (E968.3)"/>
+		<value code="E968.4" label="Criminal neglect (E968.4)"/>
+		<value code="E968.8" label="Other specified means (E968.8)"/>
+		<value code="E968.9" label="Unspecified means (E968.9)"/>
+		<value code="E969" label="Late effects of injury purposely inflicted by other person (E969)"/>
+	</variable>
+</variable-selections>
+<byvariables>
+	<variable code="D16.V1"/>
+</byvariables>
+<measure-selections>
+	<measure code="D16.M1"/>
+	<measure code="D16.M2"/>
+	<measure code="D16.M3"/>
+</measure-selections>
+<data-table show-all-labels="false">
+<r><c l="1979"/><c v="22,202"/><c v="224,635,398"/><c v="9.883571422"/></r>
+<r><c l="1980"/><c v="23,967"/><c v="226,624,371"/><c v="10.575649871"/></r>
+<r><c l="1981"/><c v="23,361"/><c v="229,487,512"/><c v="10.179638882"/></r>
+<r><c l="1982"/><c v="22,073"/><c v="231,701,425"/><c v="9.526484354"/></r>
+<r><c l="1983"/><c v="19,922"/><c v="233,781,743"/><c v="8.521623521"/></r>
+<r><c l="1984"/><c v="19,510"/><c v="235,922,142"/><c v="8.269677375"/></r>
+<r><c l="1985"/><c v="19,628"/><c v="238,005,715"/><c v="8.246860795"/></r>
+<r><c l="1986"/><c v="21,462"/><c v="240,189,882"/><c v="8.935430511"/></r>
+<r><c l="1987"/><c v="20,812"/><c v="242,395,034"/><c v="8.585984480"/></r>
+<r><c l="1988"/><c v="21,784"/><c v="244,651,961"/><c v="8.904077413"/></r>
+<r><c l="1989"/><c v="22,578"/><c v="247,001,762"/><c v="9.140825481"/></r>
+<r><c l="1990"/><c v="24,614"/><c v="248,922,111"/><c v="9.888233673"/></r>
+<r><c l="1991"/><c v="26,254"/><c v="253,088,068"/><c v="10.373464149"/></r>
+<r><c l="1992"/><c v="25,144"/><c v="256,606,463"/><c v="9.798662008"/></r>
+<r><c l="1993"/><c v="25,653"/><c v="260,024,637"/><c v="9.865603620"/></r>
+<r><c l="1994"/><c v="24,547"/><c v="263,241,475"/><c v="9.324898366"/></r>
+<r><c l="1995"/><c v="22,552"/><c v="266,386,596"/><c v="8.465891429"/></r>
+<r><c l="1996"/><c v="20,634"/><c v="269,540,779"/><c v="7.655242400"/></r>
+<r><c l="1997"/><c v="19,491"/><c v="272,776,678"/><c v="7.145405591"/></r>
+<r><c l="1998"/><c v="17,893"/><c v="276,032,848"/><c v="6.482199539"/></r>
+<r><c c="1"/><c dt="444,081"/><c dt="4,961,016,600"/><c dt="8.951411289"/></r>
+</data-table>
+<footnotes>
+</footnotes>
+<citation>Centers for Disease Control and Prevention, National Center for Health Statistics. National Vital Statistics System, Mortality:  Compressed Mortality File  1979-1998.  CDC WONDER On-line Database, compiled from Compressed Mortality File CMF 1968-1988, Series 20, No. 2A, 2000 and CMF 1989-1998, Series 20, No. 2E, 2003.</citation>

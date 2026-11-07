@@ -65,6 +65,8 @@ below matched.
 | `epi/EPI_hourly_wage_percentiles__national_real_wage_2025_p10_p50_p90.csv` | EPI State of Working America Data Library (CPS, EPI extracts; deflated with extended C-CPI-U) | data.epi.org API, indicator `hourly_wage_percentiles`, measure `real_wage_2025`, national, p10/p50/p90, 1973-2025 (see `epi/epi_provenance.json`) | B3 | 2026-11-06 |
 | `maddison/MADDISON_mpd2023_web.xlsx` | Maddison Project Database 2023 (Bolt & van Zanden 2024), Dataverse doi:10.34894/INZBF2 | dataverse.nl/api/access/datafile/421302 (complete file; SHA-1 equals Dataverse's; see `maddison/maddison_provenance.json`) | world-growth luck control (sheet `Full data`) | 2026-11-06 |
 | `wieland_yang/RR_monetary_shock_{annual,quarterly,monthly}.txt` | Wieland & Yang updated Romer-Romer shocks, GitHub `johanneswieland/RomerShocks` at commit b0092c4 (linked from johanneswieland.github.io; stable copy on openICPSR 135741) | complete files, plus Wieland's `RR_monetary_shock_update.do` and readme (`WY_readme.md`); see `wieland_yang/wieland_yang_provenance.json` | monetary-shock luck control, 1969-2007 | 2026-11-06 |
+| `wonder/WONDER_*__by_year.xml` (6 files) | CDC WONDER (NCHS): Compressed Mortality 1968-78 (D74) and 1979-98 (D16), Underlying Cause of Death 1999-2020 (D76) and 2018-2024 (D158) | WONDER XML API, national, by year: homicide deaths, population, crude rate; ICD-8/9 E960-E969, ICD-10 *U01-*U02, X85-Y09, Y87.1 (plus X85-Y09, Y87.1 without terrorism codes for 1999-2024); verbatim response extracts (see `wonder/wonder_provenance.json`, which also records the data use terms) | A19, 1968-2024 | 2026-11-06 |
+| `nchs/NCHS_homicide_rate_1933-1967_transcribed.csv` | NCHS published rates: Linder & Grove (1943) *Vital Statistics Rates in the United States, 1900-1940*, Table 15; HIST290 tables 1940-49, 1950-59, 1960-67 (cdc.gov) | typed by hand, one decimal as printed; source PDFs' SHA-256 in `nchs/nchs_provenance.json` | A19, 1933-1967 | 2026-11-06 |
 
 FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves incomplete periods blank (e.g. 2026).
 
@@ -78,7 +80,7 @@ FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves inc
 
 | Item | Planned source | Status |
 | --- | --- | --- |
-| A19 homicide rate 1900+ | CDC/NCHS vital statistics; HSUS for early years | Researched 2026-11-06, nothing pulled; plan to be decided by the researcher. Findings: HIST290 (1900-39) has no homicide table. Machine-readable on data.cdc.gov: `nt65-c7a7` NCHS Injury Mortality (homicide deaths, population, rates) 1999-2016 and `t6u2-f84c` Mapping Injury, Overdose and Violence, national annual homicide 2019-2025. CDC WONDER covers 1968-2024 in one consistent system but requires accepting its data-use terms. Before 1968 the NCHS rates are in scanned volumes (Linder & Grove 1943 for 1900-40, death-registration states only before 1933; Grove & Hetzel 1968 for 1940-60). |
+| A19 homicide rate 1900-1932 | Eckberg (1995) adjusted estimates, or death-registration-States rates from Linder & Grove (1943) Table 15 | Not yet decided. 1933-2024 is pulled (rows above). |
 | (All other planned sources are pulled.) | | |
 
 ## Decisions on data issues
@@ -99,6 +101,8 @@ BLS annual productivity, and the Wieland & Yang (2020) Romer-Romer extension.
 - **B12 deflator:** the A3 CPI (Ecdat/MeasuringWorth) for all regions; 2024-25 from FRED CPIAUCSL annual average.
 
 ## Data notes (no results)
+
+- A19 (homicide): WONDER's two 1999-2024 series differ only by terrorism deaths (*U01-*U02): 2,922 in 2001 (September 11); in other years the difference is 9 or fewer deaths, which CDC WONDER's terms forbid publishing. UCD 1999-2020 and UCD 2018-2024 agree exactly on deaths and population for 2018-2020. Pre-1968 NCHS rates are rounded to one decimal, and the ICD-6/7 homicide group (E964, E980-E985, 1949-67) appears to include deaths from police intervention, which E960-E969 (1968+) excludes. Linder & Grove's homicide includes legal executions for 1921-29 only.
 
 - BLS annual productivity index vs FRED OPHNFB (annual average of the quarterly index): largest gap 0.24 index points over 1947-2025 (e.g. 2025: 118.434 vs 118.601).
 - BEA SAINC1 is in current dollars; B12 needs a deflator (the plan says "real" but names none). Far West excludes Alaska and Hawaii before 1950 (BEA footnote). In 1929 the Mideast had the highest per-capita income ($972) and the Southeast the lowest ($363); these fix B12's pre-named contrast.

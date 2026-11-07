@@ -1,0 +1,95 @@
+{
+ "_source": {
+  "site": "CDC WONDER (wonder.cdc.gov), National Center for Health Statistics mortality databases",
+  "method": "WONDER XML API (POST https://wonder.cdc.gov/controller/datarequest/{dataset}, parameter request_xml plus accept_datause_restrictions=true), sent from the built-in browser on wonder.cdc.gov at least 15 s apart (WONDER's API rate limit). Each request = the dataset's own web-form defaults (national, all ages, all races, both sexes) with the overrides listed per file. The researcher approved the site and agreeing to the WONDER data use terms on 2026-11-06; the I Agree click-through was completed for D74, D76 and D158.",
+  "stored": "for each query, a verbatim extract of the XML response: the response's own echo of the query (variable-selections, byvariables, measure-selections), the data-table, footnotes and citation; rebuilt by _transcripts/decode_json_extracts.py from _transcripts/wonder_extracts.json, SHA-256 required to match the browser's hash of the extract",
+  "measures": "M1 deaths, M2 population, M3 crude rate per 100,000 (precision 9 decimals); D158 also returns 95% confidence intervals for the crude rate (M32/M33)",
+  "data_use": "CDC WONDER data use restrictions (https://wonder.cdc.gov/datause.html): statistical reporting and analysis only; do not publish or present statistics representing nine or fewer deaths (including rates based on them); no attempt to identify individuals or establishments; report any inadvertent identification to the NCHS Confidentiality Officer. Every figure stored here is a national annual total in the thousands. NOTE: the 'homicide' and 'assault' files for 1999-2024 differ only by terrorism homicides (*U01-*U02); outside 2001 those differences are 9 or fewer deaths and must not be published.",
+  "citations": "see the <citation> element inside each file",
+  "pulled": "2026-11-06 (query dates in each file are in WONDER's server time, Nov 7, 2026 ~00:06-00:10)"
+ },
+ "WONDER_D74_CMF1968-1978__homicide_E960-E969__by_year.xml": {
+  "dataset": "D74 Compressed Mortality, 1968-1978 (ICD-8)",
+  "overrides": {
+   "B_1": "D74.V1 (Year)",
+   "F_D74.V2": "E960-E969 (Homicide and injury purposely inflicted by other persons)",
+   "O_precision": "9"
+  },
+  "extract_sha256": "bc5b4fe9da91fa0f71390761e9050a25702453f17175fce14173ae5fefb5aca1",
+  "request_xml_sha256": "9a02d59a640d121830dd16c191985ef16566499056831b5e98ec2733200db19f",
+  "response_sha256": "2cbddc89479fc5cca410f5b61e1c752a6597df985a477815637a7068cc78d27e",
+  "response_bytes": 35151
+ },
+ "WONDER_D16_CMF1979-1998__homicide_E960-E969__by_year.xml": {
+  "dataset": "D16 Compressed Mortality, 1979-1998 (ICD-9)",
+  "overrides": {
+   "B_1": "D16.V1 (Year)",
+   "F_D16.V2": "E960-E969",
+   "O_precision": "9"
+  },
+  "extract_sha256": "dd08f69bb0c947897a8474ac7683c8f58b9ac6c0fc1ef3d4dcfd7c4fadd445f2",
+  "request_xml_sha256": "55062d413b9328accee6b669da29c1049c80d615631a29ff23d481e43ec04060",
+  "response_sha256": "b4a94abd141560b0f05b215650097e68139ee284284a051924bca2285ffdfe75",
+  "response_bytes": 58914
+ },
+ "WONDER_D76_UCD1999-2020__homicide_GR113-127__by_year.xml": {
+  "dataset": "D76 Underlying Cause of Death, 1999-2020 (ICD-10, bridged race)",
+  "overrides": {
+   "B_1": "D76.V1-level1 (Year)",
+   "O_ucd": "D76.V4 (ICD-10 113 Cause List)",
+   "V_D76.V4": "GR113-127 #Assault (homicide) (*U01-*U02,X85-Y09,Y87.1)",
+   "O_precision": "9"
+  },
+  "extract_sha256": "2381d9e0aa16b0653915d40515827b853bf7876001899ccb75c8ba7a1a7a3d4d",
+  "request_xml_sha256": "f9989a500c6b30c33d54f3082c5bc874bb51aa20e53ccb4fd0c19ec1b80cf142",
+  "response_sha256": "a82b54107691447b901eca506ae9799bc59f7784d463f891b8ad704eeee81bce",
+  "response_bytes": 122132
+ },
+ "WONDER_D76_UCD1999-2020__assault_X85-Y09_Y87.1__by_year.xml": {
+  "dataset": "D76",
+  "overrides": {
+   "B_1": "D76.V1-level1",
+   "O_ucd": "D76.V2 (ICD-10 codes)",
+   "F_D76.V2": [
+    "X85-Y09 (Assault)",
+    "Y87.1 (Sequelae of assault)"
+   ],
+   "O_precision": "9"
+  },
+  "note": "homicide excluding terrorism codes *U01-*U02 (sensitivity series)",
+  "extract_sha256": "b320c75778a9fec80f670a71ae47fc4772a453eb6757e0bc578252be27e386b1",
+  "request_xml_sha256": "dcf4eb36961aa715be0e3bb7ea986410a22bd871fb9d938167e4fe0c72b4f393",
+  "response_sha256": "c66bd9df3102f8724ebb6b18f9a378b97f59506c365c7a1917ed83d9eb4dadc8",
+  "response_bytes": 123317
+ },
+ "WONDER_D158_UCD2018-2024__homicide_GR113-127__by_year.xml": {
+  "dataset": "D158 Underlying Cause of Death, 2018-2024, single race (ICD-10)",
+  "overrides": {
+   "B_1": "D158.V1-level1",
+   "O_ucd": "D158.V4",
+   "V_D158.V4": "GR113-127",
+   "O_precision": "9"
+  },
+  "extract_sha256": "b55c3c1f5b39710ff08b68165c51bfa5a593829e770d02310d89b698b6a6dfd9",
+  "request_xml_sha256": "7565084257c5194075a60b7def80d95badf2ebe19944ad284ef446509a15c81d",
+  "response_sha256": "d5b736bb3d64f0b0e6c195710fab6a38e95b56965ae0251f79e4659686be8d05",
+  "response_bytes": 121550
+ },
+ "WONDER_D158_UCD2018-2024__assault_X85-Y09_Y87.1__by_year.xml": {
+  "dataset": "D158",
+  "overrides": {
+   "B_1": "D158.V1-level1",
+   "O_ucd": "D158.V2",
+   "F_D158.V2": [
+    "X85-Y09",
+    "Y87.1"
+   ],
+   "O_precision": "9"
+  },
+  "note": "homicide excluding terrorism codes (sensitivity series)",
+  "extract_sha256": "37f2fe87663055676398201c4992df138edc09b64c1c3ba4ef5a3c24d11f7bcc",
+  "request_xml_sha256": "31af8eb10891d9dc5d322fa5ef67b2e8814632372d5de26aaee75577b136b6d4",
+  "response_sha256": "ac14c19bae21e02cf37977ca0724905102b29c4b983c6e595257555cc2e67ec4",
+  "response_bytes": 122745
+ }
+}
