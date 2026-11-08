@@ -67,6 +67,7 @@ below matched.
 | `wieland_yang/RR_monetary_shock_{annual,quarterly,monthly}.txt` | Wieland & Yang updated Romer-Romer shocks, GitHub `johanneswieland/RomerShocks` at commit b0092c4 (linked from johanneswieland.github.io; stable copy on openICPSR 135741) | complete files, plus Wieland's `RR_monetary_shock_update.do` and readme (`WY_readme.md`); see `wieland_yang/wieland_yang_provenance.json` | monetary-shock luck control, 1969-2007 | 2026-11-06 |
 | `wonder/WONDER_*__by_year.xml` (10 files) | CDC WONDER (NCHS): Compressed Mortality 1968-78 (D74) and 1979-98 (D16), Underlying Cause of Death 1999-2020 (D76) and 2018-2024 (D158) | WONDER XML API, national, by year: homicide deaths, population, crude rate; ICD-8/9 E960-E969, ICD-10 *U01-*U02, X85-Y09, Y87.1 (plus X85-Y09, Y87.1 without terrorism codes for 1999-2024, and legal intervention E970-E978 / Y35, Y89.0 for 1968-2024); verbatim response extracts (see `wonder/wonder_provenance.json`, which also records the data use terms) | A19, 1968-2024 | 2026-11-06 |
 | `nchs/NCHS_homicide_rate_1933-1967_transcribed.csv` | NCHS published rates: Linder & Grove (1943) *Vital Statistics Rates in the United States, 1900-1940*, Table 15; HIST290 tables 1940-49, 1950-59, 1960-67 (cdc.gov) | typed by hand, one decimal as printed; source PDFs' SHA-256 in `nchs/nchs_provenance.json` | A19, 1933-1967 | 2026-11-06 |
+| `nchs/LinderGrove1943_homicide_constant_area_1900-1940_transcribed.csv` | Linder & Grove (1943), Tables 17-19: homicide rates for the death-registration States of 1900, of 1910 and of 1920 (fixed areas) | typed by hand from the page images, one decimal as printed; reading notes in `_transcripts/linder_grove_T17_homicide_reading_notes.txt` | A19 exploratory check, 1900-1932 (not confirmatory) | 2026-11-06 |
 
 FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves incomplete periods blank (e.g. 2026).
 
@@ -80,8 +81,8 @@ FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves inc
 
 | Item | Planned source | Status |
 | --- | --- | --- |
-| A19 homicide rate 1900-1932 | Eckberg (1995) adjusted estimates, or death-registration-States rates from Linder & Grove (1943) Table 15 | Not yet decided. 1933-2024 is pulled (rows above). |
-| (All other planned sources are pulled.) | | |
+| FBI UCR murder rate, 1960+ (A19 check) | FBI Crime Data Explorer (1979+); FBI *Crime in the United States* (1960-78). Site approved by the researcher 2026-11-06 | In progress. |
+| (All other planned sources are pulled. A19 1900-1932: researcher chose to start the confirmatory series in 1933; see DEVIATIONS.md.) | | |
 
 ## Decisions on data issues
 

@@ -1,0 +1,22 @@
+Linder & Grove (1943), Vital Statistics Rates in the United States 1900-1940 (vsrates1900_40.pdf, cdc.gov)
+Table 17. Specific death rates for selected causes, by race: death-registration States of 1900, 1900-1940.
+Line 31, Homicide (165-168), All races. Read 2026-11-06 in the built-in browser (Chrome PDF viewer).
+PDF p.301 (book 296), cols 1900-1907, read at 200% and 400%: 1.2 1.2 1.2 1.1 1.3 2.1 2.0 3.0
+PDF p.302 (book 297), cols 1908-1920, read at 300% (two overlapping views; 1914-15 in both): 3.9 3.5 3.9 4.2 4.1 4.5 4.3 4.1 4.0 4.6 3.8 4.3 4.2
+PDF p.309 (book 304), cols 1921-1927, read at 200%: 4.6 4.3 4.5 5.1 5.0 5.1 5.0
+PDF p.310 (book 305), cols 1928-1940, read at 200% (two overlapping views; 1935-38 in both): 4.9 5.1 5.1 5.3 5.2 5.0 4.4 3.9 3.7 3.6 3.0 2.7 2.7
+Footnote 10 on p.296-297 ("Includes legal executions for 1900-1920, inclusive") is attached to line 37 Other accidents (169, 171-195), not to homicide.
+Spot check: PDF p.309 re-read at 300% on 2026-11-06: 4.6 4.3 4.5 5.1 5.0 5.1 5.0 (matches).
+
+Table 18. Same, death-registration States of 1910, 1910-1940. Line 31, Homicide (165-168), All races.
+PDF p.317 (book 312), cols 1910-1914, 300% (and page-fit): 4.6 4.9 4.9 5.3 5.4
+PDF p.318 (book 313), cols 1915-1925, 300% (two views; 1920-21 in both): 5.1 5.4 6.0 5.1 5.3 4.9 5.8 5.4 5.4 5.6 5.6
+PDF p.325 (book 320), cols 1926-1929, 300% (and page-fit): 5.5 5.5 5.4 5.4
+PDF p.326 (book 321), cols 1930-1940, 300% (two views; 1935-36 in both): 5.7 5.7 5.6 5.4 4.9 4.4 4.2 4.1 3.5 3.2 3.2
+Footnote 15 (line 37 Other accidents): "Includes legal executions for 1910-1921, inclusive."
+
+Table 19. Same, death-registration States of 1920, 1920-1940. Line 31, Homicide (165-168), All races.
+PDF p.333 (book 328), cols 1920-1927, 300% (1927 re-read in a second view): 6.8 8.1 7.6 7.7 7.9 8.2 8.2 8.0
+PDF p.334 (book 329), cols 1928-1940, 300% (two views; 1934-35 in both): 8.0 7.7 8.2 8.5 8.4 8.5 8.3 7.2 6.9 6.7 5.9 5.6 5.4
+Footnote 16 (line 37 Other accidents): "Includes legal executions for 1920 and 1921."
+Table note (all three tables): deaths of Mexicans included with white each year except 1932, 1933 and 1934 (affects race rows only, not All races).
