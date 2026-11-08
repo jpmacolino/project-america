@@ -68,6 +68,7 @@ below matched.
 | `wonder/WONDER_*__by_year.xml` (10 files) | CDC WONDER (NCHS): Compressed Mortality 1968-78 (D74) and 1979-98 (D16), Underlying Cause of Death 1999-2020 (D76) and 2018-2024 (D158) | WONDER XML API, national, by year: homicide deaths, population, crude rate; ICD-8/9 E960-E969, ICD-10 *U01-*U02, X85-Y09, Y87.1 (plus X85-Y09, Y87.1 without terrorism codes for 1999-2024, and legal intervention E970-E978 / Y35, Y89.0 for 1968-2024); verbatim response extracts (see `wonder/wonder_provenance.json`, which also records the data use terms) | A19, 1968-2024 | 2026-11-06 |
 | `nchs/NCHS_homicide_rate_1933-1967_transcribed.csv` | NCHS published rates: Linder & Grove (1943) *Vital Statistics Rates in the United States, 1900-1940*, Table 15; HIST290 tables 1940-49, 1950-59, 1960-67 (cdc.gov) | typed by hand, one decimal as printed; source PDFs' SHA-256 in `nchs/nchs_provenance.json` | A19, 1933-1967 | 2026-11-06 |
 | `nchs/LinderGrove1943_homicide_constant_area_1900-1940_transcribed.csv` | Linder & Grove (1943), Tables 17-19: homicide rates for the death-registration States of 1900, of 1910 and of 1920 (fixed areas) | typed by hand from the page images, one decimal as printed; reading notes in `_transcripts/linder_grove_T17_homicide_reading_notes.txt` | A19 exploratory check, 1900-1932 (not confirmatory) | 2026-11-06 |
+| `fbi/estimated_crimes_1979_2025.csv` | FBI Crime Data Explorer, Summary Reporting System estimated crimes (S3 key `additional-datasets/srs/estimated_crimes_1979_2025.csv`); see `fbi/fbi_provenance.json` | complete file, browser download (approved 2026-11-07), byte-for-byte. Actually an .xlsx workbook despite the name. No national row for 2017-2020 (State rows sum exactly to the nation in other years since 1999) | A19 check (FBI murder rate), 1979-2025 | 2026-11-07 |
 
 FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves incomplete periods blank (e.g. 2026).
 
@@ -81,7 +82,7 @@ FRED annual and quarterly aggregates are FRED's own (`fam=avg`); FRED leaves inc
 
 | Item | Planned source | Status |
 | --- | --- | --- |
-| FBI UCR murder rate, 1960+ (A19 check) | FBI Crime Data Explorer (1979+); FBI *Crime in the United States* (1960-78). Site approved by the researcher 2026-11-06 | In progress. |
+| FBI UCR murder rate, 1960-1978 (A19 check) | BJS Sourcebook of Criminal Justice Statistics, Table 3.106 (approved 2026-11-07) | Blocked: albany.edu/sourcebook now redirects to an Archive-It copy behind a 'Session Verification' (bot) check. Waiting on the researcher. 1979-2025 is pulled (row above). |
 | (All other planned sources are pulled. A19 1900-1932: researcher chose to start the confirmatory series in 1933; see DEVIATIONS.md.) | | |
 
 ## Decisions on data issues

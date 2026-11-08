@@ -1,0 +1,18 @@
+{
+ "estimated_crimes_1979_2025.csv": {
+  "what": "FBI UCR Summary Reporting System estimated crime counts and population, nation and 50 States + DC, 1979-2025 (homicide = murder and nonnegligent manslaughter). For the A19 check (FBI murder rate = homicide / population x 100,000).",
+  "page": "https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads (Additional Datasets > Summary Reporting System (SRS); site's listing: last modified August 2026, 222 KB)",
+  "object": "S3 key additional-datasets/srs/estimated_crimes_1979_2025.csv, served through a signed URL from /LATEST/s3/signedurl (bucket cde-prd-data, us-gov-east-1)",
+  "how": "Saved through the browser's own download (approved by the researcher 2026-11-07) to Downloads, then copied here unchanged; the S3 bucket does not allow page scripts to read the file.",
+  "sha256": "e7bf3de96b21d00fc10e9d60fee4d8257cba0a095ce5c5fc992047d46fb76486",
+  "bytes": 226863,
+  "format_note": "Despite the .csv name, the file is an Excel 2007+ workbook (xlsx, one sheet 'estimated_crimes_1979_2025'). Kept byte-for-byte under the FBI's file name; read it with openpyxl from bytes (openpyxl refuses the .csv extension).",
+  "columns": "year, state_abbr, state_name, population, violent_crime, homicide, rape_legacy, rape_revised, robbery, aggravated_assault, property_crime, burglary, larceny, motor_vehicle_theft, caveats",
+  "data_notes": [
+   "National rows have a blank state_abbr (state_name 'United States Total' for 2021-2025). There is NO national row for 2017-2020. From 1999 on, the 51 State rows sum exactly to the national row in every year present except 2015 (homicides 15,873 vs 15,883; population differs by 6,446), so 2017-2020 national figures can be taken as State sums: homicides 17,294 / 16,374 / 16,669 / 21,570.",
+   "Before 1999 the State homicide sums differ from the national row by at most 4, but State populations do not sum to the national population (gap up to about 1.4 million in 1989).",
+   "2001 caveat in the file: the September 11, 2001 murders are not included (consistent with A19's main series excluding *U01-*U02)."
+  ],
+  "pulled": "2026-11-07"
+ }
+}
